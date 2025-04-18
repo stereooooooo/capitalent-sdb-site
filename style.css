@@ -131,3 +131,17 @@ footer {
   padding: 20px 10px;
   font-size: 14px;
 }
+
+.micro-banner {
+  background: #f5f7fa;
+  color: #003366;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 1px solid #d3d3d3;
+}
+.micro-banner a {
+  color: #c8102e;
+  text-decoration: underline;
+  font-weight: bold;
+}
