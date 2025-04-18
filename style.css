@@ -132,19 +132,16 @@ footer {
   font-size: 14px;
 }
 
-.top-bar {
-  background-color: #000;
-  color: white;
-  font-size: 0.875rem;
-  padding: 5px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.micro-banner {
+  background: #f5f7fa;
+  color: #003366;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 1px solid #d3d3d3;
 }
-.top-bar a {
-  color: #fff;
+.micro-banner a {
+  color: #c8102e;
   text-decoration: underline;
-}
-.top-right {
-  margin-left: auto;
+  font-weight: bold;
 }
