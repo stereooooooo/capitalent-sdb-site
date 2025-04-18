@@ -1,0 +1,45 @@
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+}
+
+.icon {
+  flex: 0 0 60px;
+  font-size: 2em;
+  color: #c8102e;
+  margin-right: 20px;
+}
+
+.content {
+  flex: 1;
+}
+
+.highlight-box {
+  background: #f9f9f9;
+  border-left: 4px solid #c8102e;
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.highlight {
+  background-color: #fff4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #b30000;
+}
+
+.illustration {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.illustration img {
+  max-width: 100%;
+  height: auto;
+}
