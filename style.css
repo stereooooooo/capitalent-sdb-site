@@ -1,9 +1,47 @@
 
-body { font-family: 'Open Sans', sans-serif; margin: 0; background: #ffffff; color: #1a1a1a; }
-header { background-color: #003366; padding: 1.5em 2em; color: white; }
-header h1 { margin: 0; font-size: 1.5em; }
-nav { margin-top: 0.5em; }
-nav a { color: white; margin-right: 20px; text-decoration: none; font-weight: 600; }
-section { padding: 2em; max-width: 900px; margin: auto; }
-section h2 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 0.2em; }
-footer { background-color: #f0f0f0; text-align: center; padding: 1em; font-size: 0.9em; color: #555; }
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: #333;
+}
+header {
+  background-color: #003366;
+  padding: 1.2em 2em;
+  color: white;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.4em;
+}
+nav {
+  margin-top: 0.5em;
+}
+nav a {
+  color: white;
+  margin-right: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+section {
+  padding: 2.5em 1.5em;
+  max-width: 900px;
+  margin: auto;
+}
+section h2 {
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+}
+ul {
+  padding-left: 1.5em;
+}
+footer {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 1.2em;
+  font-size: 0.9em;
+  color: #666;
+}
