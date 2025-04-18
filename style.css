@@ -112,3 +112,19 @@ footer {
   background: #f8f8f8;
   color: #333;
 }
+
+
+nav a {
+  text-decoration: none;
+  color: #001f4d;
+  font-weight: 600;
+  margin: 0 12px;
+  padding: 8px 4px;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: #c8102e;
+  border-bottom: 2px solid #c8102e;
+}
