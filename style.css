@@ -145,3 +145,30 @@ footer {
   text-decoration: underline;
   font-weight: bold;
 }
+.treatment-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.treatment-block img {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.treatment-block p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.treatment-box {
+  background: #f9f9f9;
+  border-left: 4px solid #c8102e;
+  padding: 16px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
