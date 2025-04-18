@@ -5,6 +5,35 @@
   <meta charset="UTF-8" />
   <title>Treatment Options | Capital ENT</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .treatment-section {
+      margin-bottom: 40px;
+    }
+
+    .treatment-section h2 {
+      margin-top: 0;
+    }
+
+    .treatment-image {
+      display: block;
+      max-width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .details-box {
+      background-color: #f9f9f9;
+      border-left: 4px solid #c8102e;
+      padding: 15px 20px;
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 40px 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -39,66 +68,71 @@
 
 <main class="container">
 
-  <section>
+  <section class="treatment-section">
     <h2>CPAP Therapy</h2>
-    <div style="display: flex; align-items: flex-start; gap: 20px;">
-      <img src="cpap-illustration.png" alt="CPAP therapy illustration" style="max-width: 200px; height: auto; border-radius: 6px;" />
-      <p>
-        Pressurized airflow therapy delivered through a mask to keep your airway open during sleep. This is the first-line treatment for moderate to severe OSA. When tolerated, CPAP is highly effective in restoring restful sleep, improving oxygen levels, and reducing cardiovascular risk.
-      </p>
+    <img src="cpap.png" alt="CPAP therapy illustration" class="treatment-image" />
+    <p>Pressurized airflow therapy delivered through a mask to keep your airway open during sleep. This is the first-line treatment for moderate to severe OSA. When tolerated, CPAP is highly effective in restoring restful sleep, improving oxygen levels, and reducing cardiovascular risk.</p>
+    <div class="details-box">
+      <strong>Best for:</strong> Patients with moderate to severe OSA without major anatomical obstruction.<br>
+      <strong>Pros:</strong> Most effective treatment option; immediate results; non-invasive.<br>
+      <strong>Cons:</strong> Can be uncomfortable; requires nightly use; machine maintenance and travel considerations.
     </div>
   </section>
-  <hr style="border: none; border-bottom: 1px solid #e0e0e0; margin: 40px 0;">
 
-  <section>
+  <hr>
+
+  <section class="treatment-section">
     <h2>Oral Appliances</h2>
-    <div style="display: flex; align-items: flex-start; gap: 20px;">
-      <img src="images/oral-appliance-placeholder.png" alt="Oral appliance placeholder" style="max-width: 200px; height: auto; border-radius: 6px;" />
-      <p>
-        These custom-fit dental devices gently reposition your lower jaw or tongue to prevent the airway from collapsing during sleep. Oral appliances are ideal for patients with mild to moderate OSA or those who find CPAP uncomfortable or difficult to tolerate.
-      </p>
+    <img src="oral-placeholder.png" alt="Oral appliance placeholder" class="treatment-image" />
+    <p>These custom-fit dental devices gently reposition your lower jaw or tongue to prevent the airway from collapsing during sleep. Oral appliances are ideal for patients with mild to moderate OSA or those who find CPAP uncomfortable or difficult to tolerate.</p>
+    <div class="details-box">
+      <strong>Best for:</strong> Mild to moderate OSA, especially in patients who cannot tolerate CPAP.<br>
+      <strong>Pros:</strong> Compact, easy to travel with, well-tolerated by many patients.<br>
+      <strong>Cons:</strong> Less effective for severe OSA; may cause jaw discomfort or dental changes over time.
     </div>
   </section>
-  <hr style="border: none; border-bottom: 1px solid #e0e0e0; margin: 40px 0;">
 
-  <section>
+  <hr>
+
+  <section class="treatment-section">
     <h2>Inspire Therapy</h2>
-    <div style="display: flex; align-items: flex-start; gap: 20px;">
-      <img src="images/inspire-placeholder.png" alt="Inspire placeholder" style="max-width: 200px; height: auto; border-radius: 6px;" />
-      <p>
-        Inspire is an implantable device that stimulates key airway muscles while you sleep, preventing airway collapse. It's best suited for patients with moderate to severe OSA who cannot tolerate CPAP and meet specific anatomical and diagnostic criteria.
-      </p>
+    <img src="inspire-placeholder.png" alt="Inspire placeholder" class="treatment-image" />
+    <p>Inspire is an implantable device that stimulates key airway muscles while you sleep, preventing airway collapse. It’s best suited for patients with moderate to severe OSA who cannot tolerate CPAP and meet specific anatomical and diagnostic criteria.</p>
+    <div class="details-box">
+      <strong>Best for:</strong> Moderate to severe OSA with CPAP intolerance and favorable airway anatomy.<br>
+      <strong>Pros:</strong> No mask or hose; long-term relief with consistent results.<br>
+      <strong>Cons:</strong> Surgical procedure required; requires evaluation and follow-up programming; not for all OSA types.
     </div>
   </section>
-  <hr style="border: none; border-bottom: 1px solid #e0e0e0; margin: 40px 0;">
 
-  <section>
+  <hr>
+
+  <section class="treatment-section">
     <h2>Nasal & Sinus Surgery</h2>
-    <div style="display: flex; align-items: flex-start; gap: 20px;">
-      <img src="images/nasal-surgery-placeholder.png" alt="Nasal surgery placeholder" style="max-width: 200px; height: auto; border-radius: 6px;" />
-      <p>
-        Procedures such as septoplasty, turbinate reduction, or balloon sinuplasty improve nasal airflow. These surgeries are often used in combination with other sleep therapies, particularly when nasal obstruction limits CPAP tolerance or worsens OSA symptoms.
-      </p>
+    <p>Surgical options such as septoplasty, turbinate reduction, or balloon sinuplasty can improve nasal airflow. These procedures are often used in combination with other treatments to optimize airway patency and breathing comfort.</p>
+    <div class="details-box">
+      <strong>Best for:</strong> Patients with nasal obstruction contributing to poor CPAP tolerance or nighttime breathing.<br>
+      <strong>Pros:</strong> Structural correction; can improve success of other treatments.<br>
+      <strong>Cons:</strong> Recovery time; risk of bleeding or recurrence depending on anatomy.
     </div>
   </section>
-  <hr style="border: none; border-bottom: 1px solid #e0e0e0; margin: 40px 0;">
 
-  <section>
+  <hr>
+
+  <section class="treatment-section">
     <h2>Weight Management</h2>
-    <div style="display: flex; align-items: flex-start; gap: 20px;">
-      <img src="images/weight-placeholder.png" alt="Weight loss placeholder" style="max-width: 200px; height: auto; border-radius: 6px;" />
-      <p>
-        Weight loss can significantly reduce the severity of OSA. At Capital ENT, we offer in-house nutrition counseling and medical weight loss options, including GLP-1 medications like Zepbound, as part of a comprehensive treatment plan.
-      </p>
+    <p>Weight loss can significantly improve or resolve OSA in some patients. We offer support through our licensed dietitian and medical therapy options, including medications like Zepbound when appropriate.</p>
+    <div class="details-box">
+      <strong>Best for:</strong> Patients with elevated BMI contributing to airway collapse.<br>
+      <strong>Pros:</strong> Addresses root cause; benefits extend beyond sleep; can reduce need for other therapies.<br>
+      <strong>Cons:</strong> Gradual improvement; requires long-term lifestyle commitment.
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <p>Capital ENT & Sinus Center © 2024<br>
-    <a href="https://www.capitalent.com">www.capitalent.com</a>
-  </p>
+<footer>
+  <p>Capital ENT & Sinus Center © 2024<br><a href="https://www.capitalent.com">www.capitalent.com</a></p>
 </footer>
 
 </body>
