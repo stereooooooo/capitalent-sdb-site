@@ -1,12 +1,9 @@
-body { font-family: 'Helvetica Neue', sans-serif; margin: 0; padding: 0; color: #1a1a1a; background: #fff; }
-header, footer { background-color: #f7f7f7; padding: 1.5em 2em; }
-header h1 { font-size: 1.8em; color: #003366; margin: 0; }
-nav a { margin-right: 20px; color: #003366; text-decoration: none; font-weight: 500; }
-.hero { background-color: #003366; padding: 5em 2em; text-align: center; color: white; }
-.hero h2 { font-size: 2em; margin-bottom: 0.5em; }
-.hero p { font-size: 1.1em; margin-bottom: 1em; }
-.btn { display: inline-block; padding: 0.75em 1.5em; background-color: #003366; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; }
-section { padding: 3em 2em; max-width: 900px; margin: 0 auto; }
-section h2 { color: #003366; margin-bottom: 0.5em; }
-ul { padding-left: 1.5em; }
-footer p { margin: 0.2em 0; font-size: 0.9em; }
+
+body { font-family: 'Open Sans', sans-serif; margin: 0; background: #ffffff; color: #1a1a1a; }
+header { background-color: #003366; padding: 1.5em 2em; color: white; }
+header h1 { margin: 0; font-size: 1.5em; }
+nav { margin-top: 0.5em; }
+nav a { color: white; margin-right: 20px; text-decoration: none; font-weight: 600; }
+section { padding: 2em; max-width: 900px; margin: auto; }
+section h2 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 0.2em; }
+footer { background-color: #f0f0f0; text-align: center; padding: 1em; font-size: 0.9em; color: #555; }
