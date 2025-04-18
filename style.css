@@ -49,8 +49,9 @@ nav a:hover {
 }
 
 .content-wrapper {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 footer {
@@ -79,17 +80,7 @@ h2 {
   border-radius: 6px;
 }
 
-.icon-list {
-  list-style: none;
-  padding: 0;
-}
-
-.icon-list li {
-  margin: 0.5rem 0;
-}
-
-.icon-list li span {
-  color: #003366;
-  margin-right: 0.5rem;
-  font-weight: bold;
+ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
 }
