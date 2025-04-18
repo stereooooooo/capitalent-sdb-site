@@ -6,26 +6,26 @@ body {
   color: #333;
 }
 header {
-  background-color: #003366;
-  padding: 1.2em 2em;
-  color: white;
+  background-color: white;
+  padding: 1em 2em;
+  border-bottom: 1px solid #ddd;
 }
-header h1 {
-  margin: 0;
-  font-size: 1.4em;
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-nav {
-  margin-top: 0.5em;
+.logo {
+  height: 45px;
 }
 nav a {
-  color: white;
-  margin-right: 16px;
+  color: #003366;
+  margin-left: 20px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95em;
 }
 section {
-  padding: 2.5em 1.5em;
+  padding: 2em 1.5em;
   max-width: 900px;
   margin: auto;
 }
@@ -33,10 +33,14 @@ section h2 {
   color: #003366;
   border-bottom: 2px solid #003366;
   padding-bottom: 0.3em;
-  margin-top: 1.5em;
+  margin-top: 2em;
 }
-ul {
-  padding-left: 1.5em;
+.treatment-img {
+  max-width: 100%;
+  height: auto;
+  margin: 1em 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 footer {
   background-color: #f8f8f8;
