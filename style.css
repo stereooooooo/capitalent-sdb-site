@@ -7,7 +7,7 @@ body {
 }
 header {
   background-color: white;
-  padding: 1em 2em;
+  padding: 1.5em 2em;
   border-bottom: 1px solid #ddd;
 }
 .logo-nav {
@@ -16,7 +16,8 @@ header {
   justify-content: space-between;
 }
 .logo {
-  height: 65px;  /* Increased from 45px to 65px */
+  height: 90px;
+  max-height: 100px;
 }
 nav a {
   color: #003366;
