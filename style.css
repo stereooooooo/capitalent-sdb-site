@@ -3,8 +3,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #222;
   background-color: #ffffff;
+  color: #222;
 }
 
 .top-bar {
@@ -44,14 +44,62 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.main-content {
+.hero {
+  background-color: #1a3365;
+  color: #fff;
   padding: 2rem;
+  text-align: center;
 }
 
-.content-wrapper {
+.hero h1 {
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  background-color: #e25b28;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #c94e20;
+}
+
+.container {
   max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  flex: 1 1 45%;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  color: #003366;
+  margin-top: 0;
 }
 
 footer {
@@ -60,27 +108,4 @@ footer {
   background: #f0f0f0;
   padding: 1rem;
   margin-top: 2rem;
-}
-
-h1, h2 {
-  color: #003366;
-}
-
-h2 {
-  border-bottom: 3px solid #003366;
-  padding-bottom: 0.3rem;
-  margin-top: 2rem;
-}
-
-.intro-box {
-  background-color: #e8eef4;
-  padding: 1.5rem;
-  border-left: 5px solid #003366;
-  margin-bottom: 2rem;
-  border-radius: 6px;
-}
-
-ul {
-  padding-left: 1.25rem;
-  margin-bottom: 1.5rem;
 }
