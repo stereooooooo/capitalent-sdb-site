@@ -16,7 +16,7 @@ header {
   justify-content: space-between;
 }
 .logo {
-  height: 45px;
+  height: 65px;  /* Increased from 45px to 65px */
 }
 nav a {
   color: #003366;
