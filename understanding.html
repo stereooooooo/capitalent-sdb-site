@@ -6,18 +6,34 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     .info-box {
-      background: #f9f9f9;
-      padding: 24px;
-      border-radius: 8px;
-      margin-bottom: 32px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 6px;
     }
-    .symptoms-columns {
+
+    .sdb-types {
       display: flex;
+      flex-wrap: wrap;
       gap: 40px;
+      line-height: 1.8;
     }
-    .symptoms-columns ul {
-      list-style: disc;
+
+    .sdb-type {
+      flex: 1 1 45%;
+    }
+
+    .symptoms-list {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      column-gap: 40px;
+      line-height: 1.8;
+    }
+
+    section h2 {
+      margin-top: 0;
     }
   </style>
 </head>
@@ -47,48 +63,44 @@
   </div>
 </header>
 
-<div class="hero">
+<section class="hero">
   <h1>Understanding Sleep-Disordered Breathing</h1>
   <p>Learn about how sleep-disordered breathing affects your health and what symptoms to watch for.</p>
-</div>
+</section>
 
-<div class="container">
+<main class="container">
   <section class="info-box">
     <h2>Types of Sleep-Disordered Breathing</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-      <div style="flex: 1; min-width: 260px;">
+    <div class="sdb-types">
+      <div class="sdb-type">
         <h3>Primary Snoring</h3>
-        <p>Noisy breathing during sleep caused by vibration of tissues in the throat (such as the soft palate or uvula). It <em>does not</em> involve pauses in breathing or drops in oxygen, but it may still disrupt sleep and indicate airflow restriction.</p>
+        <p>Noisy breathing during sleep caused by vibration of tissues in the throat (such as the soft palate or uvula). It does not involve pauses in breathing or drops in oxygen, but it may still disrupt sleep and indicate airflow restriction.</p>
       </div>
-      <div style="flex: 1; min-width: 260px;">
+      <div class="sdb-type">
         <h3>Upper Airway Resistance Syndrome (UARS)</h3>
-        <p>A condition where the airway narrows slightly during sleep, causing increased effort to breathe. Though oxygen levels typically remain stable, this leads to repeated arousals (micro-awakenings), resulting in <em>unrefreshing sleep and daytime fatigue</em>.</p>
+        <p>A condition where the airway narrows slightly during sleep, causing increased effort to breathe. Though oxygen levels typically remain stable, this leads to repeated arousals (micro-awakenings), resulting in unrefreshing sleep and daytime fatigue.</p>
       </div>
-      <div style="flex: 1 100%;">
-        <h3>Obstructive Sleep Apnea (OSA)</h3>
-        <p>A more serious condition where the airway becomes partially or completely blocked repeatedly during sleep. These episodes can last 10 seconds or longer, leading to <em>reduced oxygen levels</em>, poor sleep quality, and long-term health risks. OSA severity is measured by the <strong>Apnea-Hypopnea Index (AHI)</strong> on a sleep study.</p>
-      </div>
+    </div>
+    <div style="margin-top: 20px">
+      <h3>Obstructive Sleep Apnea (OSA)</h3>
+      <p>A more serious condition where the airway becomes partially or completely blocked repeatedly during sleep. These episodes can last 10 seconds or longer, leading to reduced oxygen levels, poor sleep quality, and long-term health risks. OSA severity is measured by the Apnea-Hypopnea Index (AHI) on a sleep study.</p>
     </div>
   </section>
 
   <section class="info-box">
     <h2>Common Symptoms</h2>
-    <div class="symptoms-columns">
-      <ul>
-        <li>Loud, chronic snoring</li>
-        <li>Excessive daytime fatigue</li>
-        <li>Morning headaches</li>
-        <li>Dry mouth or sore throat upon waking</li>
-        <li>Waking up gasping or choking</li>
-      </ul>
-      <ul>
-        <li>Trouble staying asleep or frequent awakenings</li>
-        <li>Brain fog or memory and focus issues</li>
-        <li>Mood changes, such as irritability or depression</li>
-        <li>Decreased libido</li>
-        <li>Difficulty losing weight</li>
-      </ul>
-    </div>
+    <ul class="symptoms-list">
+      <li>Loud, chronic snoring</li>
+      <li>Excessive daytime fatigue</li>
+      <li>Morning headaches</li>
+      <li>Dry mouth or sore throat upon waking</li>
+      <li>Waking up gasping or choking</li>
+      <li>Trouble staying asleep or frequent awakenings</li>
+      <li>Brain fog or memory and focus issues</li>
+      <li>Mood changes, such as irritability or depression</li>
+      <li>Decreased libido</li>
+      <li>Difficulty losing weight</li>
+    </ul>
     <p><em>Note: Many people with SDB don’t realize they’re waking up throughout the night.</em></p>
   </section>
 
@@ -111,13 +123,12 @@
     </ul>
     <p><strong>The good news is</strong> that effective treatments exist. Identifying and treating SDB can lead to better sleep, more energy, improved mood, and long-term health benefits.</p>
   </section>
-</div>
+</main>
 
-<footer class="site-footer">
+<footer>
   <p>Capital ENT & Sinus Center © 2024<br>
     <a href="https://www.capitalent.com">www.capitalent.com</a>
   </p>
 </footer>
-
 </body>
 </html>
