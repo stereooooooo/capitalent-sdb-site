@@ -253,8 +253,8 @@ footer {
   border-left: 4px solid #c8102e;
   padding: 16px 20px;
   margin: 24px 0;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  line-height: 1.6;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  line-height: 1.7;
 }
 
 .floating-box h3 {
