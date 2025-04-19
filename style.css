@@ -262,3 +262,6 @@ footer {
   font-size: 1.1em;
   color: #001f4d;
 }
+p {
+  line-height: 1.7;
+}
