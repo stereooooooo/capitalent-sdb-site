@@ -238,3 +238,13 @@ footer {
   color: #001f4d;
   text-decoration: underline;
 }
+.highlight-box {
+  background: #f5f7fa;
+  border-left: 4px solid #c8102e;
+  padding: 16px 20px;
+  margin: 20px auto 40px;
+  max-width: 960px;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #001f4d;
+}
