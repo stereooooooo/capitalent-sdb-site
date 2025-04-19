@@ -72,6 +72,26 @@
   font-size: 0.95em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
+    .sdb-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.sdb-grid .text {
+  line-height: 1.7;
+}
+
+.floating-box {
+  background: #f9f9f9;
+  border-left: 4px solid #c8102e;
+  border-radius: 6px;
+  padding: 16px 20px;
+  font-size: 0.95em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
   </style>
 </head>
 <body>
@@ -110,11 +130,11 @@
   <div class="card-section">
     <h2 class="section-title">Types of Sleep-Disordered Breathing</h2>
 
-<div class="sdb-section">
-  <div class="sdb-main">
+<div class="sdb-grid">
+  <div class="text">
     <p><strong>Primary Snoring:</strong> Noisy breathing during sleep caused by vibration of tissues in the throat (such as the soft palate or uvula). It <em>does not</em> involve pauses in breathing or drops in oxygen, but may still disrupt sleep and indicate airflow restriction.</p>
   </div>
-  <div class="sdb-facts floating-box">
+  <div class="floating-box">
     <strong>Snoring Facts:</strong>
     <ul>
       <li>Often worsens with age and weight gain</li>
@@ -124,29 +144,29 @@
   </div>
 </div>
 
-    <div class="sdb-section">
-  <div class="sdb-main">
-    <p><strong>Upper Airway Resistance Syndrome (UARS):</strong> A condition where the airway narrows slightly during sleep, causing increased effort to breathe. Though oxygen levels typically remain stable, this leads to repeated arousals (micro-awakenings), resulting in <em>unrefreshing sleep and daytime fatigue.</p>
+<div class="sdb-grid">
+  <div class="text">
+    <p><strong>Upper Airway Resistance Syndrome (UARS):</strong> A condition where the airway narrows slightly during sleep, causing increased effort to breathe. Though oxygen levels typically remain stable, this leads to repeated arousals (micro-awakenings), resulting in <em>unrefreshing sleep and daytime fatigue</em>.</p>
   </div>
-  <div class="sdb-facts floating-box">
+  <div class="floating-box">
     <strong>Causes:</strong>
     <ul>
       <li>Small jaw or narrow airway anatomy</li>
-      <li>Increased nasal resistance or turbinate hypertrophyn</li>
+      <li>Increased nasal resistance or turbinate hypertrophy</li>
       <li>More common in younger, thinner individuals</li>
     </ul>
   </div>
 </div>
 
-    <div class="sdb-section">
-  <div class="sdb-main">
-    <p><strong>Obstructive Sleep Apnea (OSA):</strong> A more serious condition where the airway becomes partially or completely blocked repeatedly during sleep. These episodes can last 10 seconds or longer, leading to <em>reduced oxygen levels</em>, poor sleep quality, and long-term health risks. OSA severity is measured by the <strong>Apnea-Hypopnea Index (AHI)</strong> on a sleep study.</p>
+<div class="sdb-grid">
+  <div class="text">
+    <p><strong><em>Obstructive Sleep Apnea (OSA):</em></strong> A more serious condition where the airway becomes partially or completely blocked repeatedly during sleep. These episodes can last 10 seconds or longer, leading to <em>reduced oxygen levels</em>, poor sleep quality, and long-term health risks. OSA severity is measured by the <strong>Apnea-Hypopnea Index (AHI)</strong> on a sleep study.</p>
   </div>
-  <div class="sdb-facts floating-box">
+  <div class="floating-box">
     <strong>Did you know?</strong>
     <ul>
       <li>OSA affects over 20 million Americans, but many are undiagnosed</li>
-      <li>Risk factors include obesity, neck circumference >17 inches in men</li>
+      <li>Risk factors include obesity, neck circumference &gt;17 inches in men</li>
       <li>Untreated OSA increases the risk of hypertension and stroke</li>
     </ul>
   </div>
