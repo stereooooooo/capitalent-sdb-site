@@ -200,3 +200,41 @@ footer {
   padding-left: 20px;
   line-height: 1.6;
 }
+.homepage .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+.homepage .card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  line-height: 1.6;
+}
+
+.homepage .card h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #001f4d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.homepage .card p {
+  font-size: 0.95em;
+  margin-bottom: 12px;
+}
+
+.homepage .card a {
+  font-weight: bold;
+  color: #001f4d;
+  text-decoration: underline;
+}
