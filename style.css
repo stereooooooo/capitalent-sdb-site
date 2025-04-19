@@ -172,3 +172,31 @@ footer {
   font-size: 0.95em;
   line-height: 1.5;
 }
+.comparison-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.comparison-card {
+  flex: 1;
+  min-width: 300px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  border-left: 4px solid #1b2a52;
+}
+
+.comparison-card h3 {
+  margin-top: 0;
+  color: #001f4d;
+  font-size: 1.1em;
+}
+
+.comparison-card ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
