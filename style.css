@@ -274,3 +274,36 @@ p {
 li {
   line-height: 1.7
 }
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid #e1e5ea;
+  border-radius: 10px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.info-card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.info-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #001f4d;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333f4f;
+}
