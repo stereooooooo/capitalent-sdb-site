@@ -60,20 +60,23 @@ nav a:hover {
 }
 
 .hero {
-  background: #1b2a52;
-  color: #fff;
+  background-color: #1d2a50; /* a lighter navy than #0c1c3d */
+  padding: 60px 20px;
   text-align: center;
-  padding: 40px 20px;
 }
 
 .hero h1 {
-  margin: 0;
-  font-size: 2em;
+  font-family: 'Georgia', serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 1.1em;
-  margin: 12px 0 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #dce3f1;
 }
 
 .cta-button {
