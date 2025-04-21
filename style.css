@@ -319,6 +319,8 @@ li {
     transform: none;
   }
 }
+/* Add this to your main CSS (style.css) to improve mobile responsiveness */
+
 /* Ensure body content scales properly */
 body {
   font-size: 16px;
@@ -392,6 +394,7 @@ nav {
 
 /* Card grid becomes single column */
 .card-grid {
+  display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
@@ -402,7 +405,32 @@ nav {
   padding: 14px 16px;
 }
 
-@media (min-width: 600px) {
+/* Adjust article content layout on mobile */
+@media (max-width: 768px) {
+  .resources-container {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .article-display {
+    padding: 0 16px;
+  }
+
+  .article-display h2 {
+    font-size: 1.4rem;
+  }
+
+  .article-display p,
+  .article-display li {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 769px) {
   .card-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
