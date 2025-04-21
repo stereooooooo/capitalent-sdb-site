@@ -3,46 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sleep Articles & Resources | Capital ENT</title>
+  <title>Sleep Health Articles & Resources | Capital ENT</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
   <style>
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-    .article-card {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    .resources-container {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .article-card h3 {
+    .sidebar {
+      width: 250px;
+      margin-right: 40px;
+      border-right: 1px solid #ccc;
+      padding-right: 20px;
+    }
+    .sidebar h3 {
+      font-size: 1.1em;
       margin-top: 0;
-      font-size: 1.2em;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    .sidebar a {
       color: #001f4d;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
     }
-    .article-card p {
-      font-size: 0.95em;
-      color: #333;
-      line-height: 1.6;
-    }
-    .article-card a {
-      margin-top: 12px;
+    .sidebar a:hover {
       text-decoration: underline;
-      font-weight: bold;
-      color: #c8102e;
+    }
+    .article-display {
+      flex: 1;
+    }
+    .article-display h2 {
+      font-size: 1.6em;
+      margin-top: 0;
+    }
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
   <div class="micro-banner">
-    This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
+    This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
+    <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
   </div>
   <div class="top-bar">
     Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
@@ -64,86 +76,57 @@
 
   <section class="hero">
     <h1>Sleep Health Articles & Resources</h1>
-    <p>Explore our collection of easy-to-read articles covering common questions and helpful tips about sleep, snoring, and treatment options.</p>
+    <p>Explore categorized, easy-to-read articles about sleep health, snoring, treatment options, and more.</p>
   </section>
 
-  <main class="container">
-    <div class="articles-grid">
-      <div class="article-card">
-        <h3>Can Melatonin Help You Sleep?</h3>
-        <p>Melatonin is a natural hormone that helps regulate your sleep-wake cycle. Learn how it works, when it might help, and what to watch out for.</p>
-        <a href="melatonin.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>How Allergies Affect Your Sleep</h3>
-        <p>Seasonal allergies can block your nose and make it harder to breathe at night. Find out how this impacts sleep and what you can do about it.</p>
-        <a href="sleepandallergies.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>Making CPAP Work for You</h3>
-        <p>CPAP can be life-changing, but only if you use it consistently. Here are tips and success stories to help make it more comfortable and effective.</p>
-        <a href="cpap-success.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>Weight Loss and Sleep Apnea</h3>
-        <p>Carrying extra weight can make sleep apnea worse. Learn how even small changes can improve sleep and reduce symptoms.</p>
-        <a href="weight-loss.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>Central vs. Obstructive Sleep Apnea</h3>
-        <p>Not all sleep apnea is the same. Understand the difference between obstructive and central types—and how treatment differs.</p>
-        <a href="central-vs-obstructive.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>When Sleep Apnea and Insomnia Overlap</h3>
-        <p>It’s possible to have both sleep apnea and insomnia. Learn how they interact and what treatment options can help you sleep better.</p>
-        <a href="insomnia.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>What is Restless Leg Syndrome?</h3>
-        <p>If your legs feel jumpy or uncomfortable at night, it could be RLS. This article explains what causes it and how it’s treated.</p>
-        <a href="restless-legs.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>Sleep Hygiene: Habits for Better Rest</h3>
-        <p>Simple daily habits that can improve your sleep quality and work alongside treatment for sleep apnea or insomnia.</p>
-        <a href="sleep-hygiene.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>How Mouth Breathing Affects Sleep</h3>
-        <p>Learn how nighttime mouth breathing can impact sleep quality, snoring, and overall health — and what to do about it.</p>
-        <a href="mouth-breathing.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>When Snoring Is a Sign of Something More</h3>
-        <p>Snoring can be harmless — but sometimes it points to obstructive sleep apnea. Here's how to know the difference.</p>
-        <a href="snoring-vs-apnea.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>Nasal Congestion at Night</h3>
-        <p>Frequent stuffy nose keeping you up? Learn common causes and how it affects sleep-disordered breathing.</p>
-        <a href="nasal-congestion.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>Do You Really Need a Sleep Study?</h3>
-        <p>What sleep studies measure, who should get one, and how they help guide treatment.</p>
-        <a href="sleep-study.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>What Happens During REM Sleep?</h3>
-        <p>REM sleep is essential for brain and body health — and it's often disrupted in apnea.</p>
-        <a href="rem-sleep.html">Read More</a>
-      </div>
-      <div class="article-card">
-        <h3>The Role of Positional Therapy in Sleep Apnea</h3>
-        <p>For some patients, avoiding back-sleeping may significantly improve breathing at night.</p>
-        <a href="positional-therapy.html">Read More</a>
-      </div>
-    </div>
-  </main>
+  <div class="resources-container">
+    <aside class="sidebar">
+      <h3>Sleep Topics</h3>
+      <ul>
+        <li><strong>Diagnosis & Basics</strong></li>
+        <li><a onclick="loadArticle('melatonin')">Can Melatonin Help You Sleep?</a></li>
+        <li><a onclick="loadArticle('central-vs-obstructive')">Central vs. Obstructive Sleep Apnea</a></li>
+        <li><a onclick="loadArticle('do-you-need-study')">Do You Really Need a Sleep Study?</a></li>
+
+        <li><strong>Management & Therapy</strong></li>
+        <li><a onclick="loadArticle('cpap')">Making CPAP Work for You</a></li>
+        <li><a onclick="loadArticle('positional-therapy')">Positional Therapy for Sleep Apnea</a></li>
+        <li><a onclick="loadArticle('sleep-hygiene')">Sleep Hygiene</a></li>
+
+        <li><strong>Related Conditions</strong></li>
+        <li><a onclick="loadArticle('allergies')">How Allergies Affect Your Sleep</a></li>
+        <li><a onclick="loadArticle('weight-loss')">Weight Loss and Sleep Apnea</a></li>
+        <li><a onclick="loadArticle('insomnia-overlap')">Sleep Apnea and Insomnia Overlap</a></li>
+        <li><a onclick="loadArticle('restless-legs')">What is Restless Leg Syndrome?</a></li>
+        <li><a onclick="loadArticle('mouth-breathing')">How Mouth Breathing Affects Sleep</a></li>
+        <li><a onclick="loadArticle('nasal-congestion')">Nasal Congestion at Night</a></li>
+        <li><a onclick="loadArticle('rem-sleep')">What Happens During REM Sleep?</a></li>
+        <li><a onclick="loadArticle('snoring-warning')">When Snoring Is a Sign of Something More</a></li>
+      </ul>
+    </aside>
+
+    <main class="article-display fade-in" id="articleDisplay">
+      <h2>Welcome to Our Sleep Resource Library</h2>
+      <p>Select an article from the sidebar to learn more about how to sleep better, breathe easier, and explore your treatment options at Capital ENT & Sinus Center.</p>
+    </main>
+  </div>
 
   <footer>
-    <p>Capital ENT & Sinus Center © 2024<br><a href="https://www.capitalent.com">www.capitalent.com</a></p>
+    <p>Capital ENT & Sinus Center © 2025<br>
+      <a href="https://www.capitalent.com">www.capitalent.com</a>
+    </p>
   </footer>
+
+  <script>
+    async function loadArticle(slug) {
+      try {
+        const response = await fetch(`resources/${slug}.html`);
+        const html = await response.text();
+        document.getElementById("articleDisplay").innerHTML = html;
+      } catch (e) {
+        document.getElementById("articleDisplay").innerHTML = '<p>Sorry, this article could not be loaded.</p>';
+      }
+    }
+  </script>
 </body>
 </html>

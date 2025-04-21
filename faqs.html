@@ -1,80 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sleep Apnea FAQs | Capital ENT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs | Capital ENT</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
   <style>
-    body {
-      line-height: 1.8;
-    }
-    section {
-      border-bottom: 1px solid #eee;
-      padding-bottom: 20px;
-      margin-bottom: 40px;
-    }
     .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    ul {
-      padding-left: 1.2rem;
+    .faq-section {
+      margin-top: 40px;
+    }
+    .accordion {
+      background-color: #f9f9fc;
+      color: #001f4d;
+      cursor: pointer;
+      padding: 16px 20px;
+      width: 100%;
+      border: none;
+      border-left: 4px solid #c8102e;
+      text-align: left;
+      outline: none;
+      font-size: 1.05rem;
+      transition: background-color 0.2s ease;
+      margin-bottom: 8px;
+    }
+    .accordion:hover {
+      background-color: #f1f1f8;
+    }
+    .active, .accordion:focus {
+      font-weight: bold;
+    }
+    .panel {
+      padding: 0 20px 16px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+      line-height: 1.7;
+      border-bottom: 1px solid #ddd;
     }
   </style>
 </head>
 <body>
-<div class="micro-banner">
-  This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
-</div>
-<div class="top-bar">
-  Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
-</div>
-<header>
-  <div class="logo-nav">
-    <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="understanding.html">Understanding SDB</a>
-      <a href="approach.html">Our Approach</a>
-      <a href="treatment.html">Treatment Options</a>
-      <a href="resources.html">Resources</a>
-      <a href="faqs.html">FAQs</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <div class="micro-banner">
+    This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
+    <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
   </div>
-</header>
-<section class="hero">
-  <h1>Frequently Asked Questions</h1>
-  <p>Answers to common questions about diagnosis, treatment, and support.</p>
-</section>
-<main class="container">
-<section>
-<h2>How long does it take to feel better after starting treatment?</h2>
-<p>Some patients feel better within days, while others may take several weeks. Sleep quality improves gradually, especially when therapy is consistent.</p>
-</section>
-<section>
-<h2>Do I have to use CPAP forever?</h2>
-<p>Not always. If your sleep apnea is mild or if weight loss or surgery improves your airway, you may be able to stop CPAP. However, many patients benefit from long-term use.</p>
-</section>
-<section>
-<h2>Will insurance cover Inspire therapy?</h2>
-<p>Most major insurers cover Inspire for eligible patients. We will work with your insurance and handle the approval process on your behalf.</p>
-</section>
-<section>
-<h2>Can I do telehealth visits?</h2>
-<p>Yes, we offer virtual follow-up visits when appropriate, especially for reviewing results, checking progress, or managing treatment plans.</p>
-</section>
-<section>
-<h2>What if I can’t tolerate CPAP?</h2>
-<p>There are many alternatives including oral appliances, Inspire therapy, nasal surgery, weight loss, and allergy treatment. We’ll help you find the right fit.</p>
-</section>
+  <div class="top-bar">
+    Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
+  </div>
+  <header>
+    <div class="logo-nav">
+      <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="understanding.html">Understanding SDB</a>
+        <a href="approach.html">Our Approach</a>
+        <a href="treatment.html">Treatment Options</a>
+        <a href="resources.html">Resources</a>
+        <a href="faqs.html" class="active">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-</main>
+  <section class="hero">
+    <h1>Frequently Asked Questions</h1>
+    <p>Your questions answered about sleep-disordered breathing, diagnosis, and treatment.</p>
+  </section>
+
+  <div class="container faq-section fade-in">
+    <button class="accordion">What is sleep-disordered breathing (SDB)?</button>
+    <div class="panel">
+      <p>SDB refers to a group of conditions — including snoring, upper airway resistance syndrome (UARS), and obstructive sleep apnea (OSA) — in which breathing is disrupted during sleep. It can affect sleep quality and overall health.</p>
+    </div>
+
+    <button class="accordion">What symptoms should I watch for?</button>
+    <div class="panel">
+      <p>Common signs include loud snoring, gasping or choking at night, waking unrefreshed, excessive daytime sleepiness, brain fog, irritability, and difficulty concentrating.</p>
+    </div>
+
+    <button class="accordion">Do I really need a sleep study?</button>
+    <div class="panel">
+      <p>Yes, if you have symptoms of SDB. A sleep study helps determine the severity and type of sleep disorder so we can tailor treatment for you.</p>
+    </div>
+
+    <button class="accordion">What is the difference between a home sleep test and in-lab study?</button>
+    <div class="panel">
+      <p>Home sleep tests are convenient and detect obstructive sleep apnea. In-lab studies provide more detailed data and are used for complex cases or when other sleep disorders are suspected.</p>
+    </div>
+
+    <button class="accordion">What treatment options do you offer?</button>
+    <div class="panel">
+      <p>We offer CPAP therapy, oral appliances, nasal and sinus procedures, throat surgery, Inspire therapy, weight management, and allergy care. Your treatment plan will be based on your anatomy, preferences, and sleep study results.</p>
+    </div>
+
+    <button class="accordion">Can I treat sleep apnea without using a CPAP machine?</button>
+    <div class="panel">
+      <p>Yes. Options include oral appliances, Inspire therapy, positional therapy, weight loss, and surgical interventions. CPAP is first-line for many patients but not the only solution.</p>
+    </div>
+
+    <button class="accordion">What if I tried CPAP and couldn’t tolerate it?</button>
+    <div class="panel">
+      <p>You’re not alone — many patients struggle at first. We can help with mask fitting, humidification, and acclimation. If it still doesn’t work, we’ll discuss alternative treatments.</p>
+    </div>
+
+    <button class="accordion">Will insurance cover my sleep evaluation and treatment?</button>
+    <div class="panel">
+      <p>Most insurance plans cover sleep studies and medically necessary treatments like CPAP. Coverage for oral appliances, Inspire, or surgery varies. We’ll help you understand your benefits.</p>
+    </div>
+
+    <button class="accordion">How do I get started?</button>
+    <div class="panel">
+      <p>Call our office to schedule a consultation. We’ll review your symptoms, perform a thorough exam, and guide you through next steps — including sleep testing and treatment planning.</p>
+    </div>
+    
+    <button class="accordion">How do I know if I'm a candidate for the Inspire Implant?</button>
+    <div class="panel">
+      <p>The Inspire implant is appropriate for certain patients with moderate to severe obstructive sleep apnea who are unable to tolerate CPAP. You must have a body mass index (BMI) under a certain threshold and undergo a brief airway evaluation called Drug-Induced Sleep Endoscopy (DISE). Our team can help assess whether you’re a candidate based on your anatomy and sleep study results.</p>
+    </div>
+  
+    <button class="accordion">What is the next step after a home sleep study is ordered?</button>
+    <div class="panel">
+      <p>Our office will get insurance approval. Our sleep study coordinator will then contact you to let you know when the device is either ready to be picked up from our office or mailed to you. You typically only need to use the home sleep study device for one night and then return it the next day. We will then either call you to notify you of your results and discuss next steps or will ask you to return to the office to discuss the results and treatment plan in person.</p>
+    </div>
+    
+  </div>
+
 <footer>
-  <p>Capital ENT & Sinus Center © 2024<br><a href="https://www.capitalent.com">www.capitalent.com</a></p>
+  <p>Capital ENT & Sinus Center © 2025<br>
+    <a href="https://www.capitalent.com">www.capitalent.com</a>
+  </p>
 </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const panel = btn.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>

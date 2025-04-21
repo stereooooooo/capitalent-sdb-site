@@ -2,222 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Understanding SDB | Capital ENT</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
   <style>
-    .card-section {
-      background-color: #f9f9f9;
-      padding: 30px;
-      border-radius: 8px;
-      margin-bottom: 32px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      line-height: 1.7;
-    }
-
-    .section-title {
-      margin-top: 0;
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #001f4d;
-    }
-
-    .callout-box {
-      background-color: #fff;
-      border-left: 4px solid #c8102e;
-      padding: 12px 16px;
-      margin-top: 16px;
-      margin-bottom: 16px;
-      font-size: 0.95rem;
-    }
-
-    .callout-box ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .callout-box p {
-      margin: 6px 0;
-    }
-
     .container {
-      max-width: 1100px;
+      max-width: 1140px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    .highlight-box {
-  background-color: #f5faff;
-  padding: 16px 24px;
-  border-left: 4px solid #1b2a52;
-  margin-top: 20px;
-  border-radius: 6px;
-  line-height: 1.6;
-}
-  .sdb-section {
+.container section {
   display: flex;
-  gap: 20px;
+  gap: 40px;
+  margin-bottom: 48px;
   align-items: flex-start;
-  margin-bottom: 40px;
 }
-
-.sdb-main {
-  flex: 2;
-}
-
-.sdb-facts {
-  flex: 1;
-  background: #f9f9f9;
-  padding: 16px;
-  border-left: 4px solid #c8102e;
-  border-radius: 6px;
-  font-size: 0.95em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-    .sdb-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  align-items: start;
-  margin-bottom: 40px;
-}
-
-.sdb-grid .text {
-  line-height: 1.7;
-}
-
-.floating-box {
-  background: #f9f9f9;
-  border-left: 4px solid #c8102e;
-  border-radius: 6px;
-  padding: 16px 20px;
-  font-size: 0.95em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
+    section > div {
+      flex: 1;
+    }
+    .floating-box {
+      background-color: #f9f9fc;
+      border-left: 4px solid #c8102e;
+      padding: 16px 20px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 0;
+      border-top: 1px solid #ddd;
+      padding-top: 32px;
+    }
+    ul {
+      line-height: 1.7;
+      padding-left: 20px;
+    }
+    p {
+      line-height: 1.7;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeIn 0.6s ease forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
   </style>
 </head>
 <body>
-
-<div class="micro-banner">
-  This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
-  <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
-</div>
-
-<div class="top-bar">
-  Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
-</div>
-
-<header>
-  <div class="logo-nav">
-    <img src="logo.svg" alt="Capital ENT & Sinus Center" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="understanding.html" class="active">Understanding SDB</a>
-      <a href="approach.html">Our Approach</a>
-      <a href="treatment.html">Treatment Options</a>
-      <a href="resources.html">Resources</a>
-      <a href="faqs.html">FAQs</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <div class="micro-banner">
+    This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
+    <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
   </div>
-</header>
+  <div class="top-bar">
+    Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
+  </div>
+  <header>
+    <div class="logo-nav">
+      <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="understanding.html" class="active">Understanding SDB</a>
+        <a href="approach.html">Our Approach</a>
+        <a href="treatment.html">Treatment Options</a>
+        <a href="resources.html">Resources</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="hero">
+<section class="hero">
   <h1>Understanding Sleep-Disordered Breathing</h1>
   <p>Learn about how sleep-disordered breathing affects your health and what symptoms to watch for.</p>
-</div>
+</section>
 
-<main class="container">
+  <div class="container">
+    <section class="fade-in">
+      <div>
+        <h2>Primary Snoring</h2>
+        <p><strong>Primary Snoring:</strong> Noisy breathing during sleep caused by vibration of tissues in the throat (such as the soft palate or uvula). It <em>does not</em> involve pauses in breathing or drops in oxygen, but it may still disrupt sleep and indicate airflow restriction.</p>
+      </div>
+      <div class="floating-box">
+        <h3>Did You Know?</h3>
+        <ul>
+          <li>Primary snoring can lead to sleep fragmentation even without apnea.</li>
+          <li>It may be a sign of increased airway resistance.</li>
+        </ul>
+      </div>
+    </section>
 
-  <div class="card-section">
-    <h2 class="section-title">Types of Sleep-Disordered Breathing</h2>
+    <section class="fade-in">
+      <div>
+        <h2>Upper Airway Resistance Syndrome (UARS)</h2>
+        <p><strong>UARS:</strong> A condition where the airway narrows slightly during sleep, causing increased effort to breathe. Though oxygen levels typically remain stable, this leads to repeated arousals (micro-awakenings), resulting in <em>unrefreshing sleep and daytime fatigue</em>.</p>
+      </div>
+      <div class="floating-box">
+        <h3>Causes</h3>
+        <ul>
+          <li>Narrow jaw or nasal passageways</li>
+          <li>Increased soft tissue in the throat</li>
+        </ul>
+      </div>
+    </section>
 
-<div class="sdb-grid">
-  <div class="text">
-    <p><strong>Primary Snoring:</strong> Noisy breathing during sleep caused by vibration of tissues in the throat (such as the soft palate or uvula). It <em>does not</em> involve pauses in breathing or drops in oxygen, but may still disrupt sleep and indicate airflow restriction.</p>
+    <section class="fade-in">
+      <div>
+        <h2>Obstructive Sleep Apnea (OSA)</h2>
+        <p><strong>OSA:</strong> A more serious condition where the airway becomes partially or completely blocked repeatedly during sleep. These episodes can last 10 seconds or longer, leading to <em>reduced oxygen levels</em>, poor sleep quality, and long-term health risks. OSA severity is measured by the <strong>Apnea-Hypopnea Index (AHI)</strong> on a sleep study.</p>
+      </div>
+      <div class="floating-box">
+        <h3>Interesting Facts</h3>
+        <ul>
+          <li>OSA often worsens during REM sleep when muscle tone is lowest.</li>
+          <li>It's associated with high blood pressure, stroke, and heart disease.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="fade-in">
+      <div>
+        <h2>Common Symptoms</h2>
+        <ul>
+          <li>Loud, chronic snoring</li>
+          <li>Excessive daytime fatigue</li>
+          <li>Morning headaches</li>
+          <li>Dry mouth or sore throat upon waking</li>
+          <li>Waking up gasping or choking</li>
+          <li>Trouble staying asleep or frequent awakenings</li>
+          <li>Brain fog or memory and focus issues</li>
+          <li>Mood changes, such as irritability or depression</li>
+          <li>Decreased libido</li>
+          <li>Difficulty losing weight</li>
+        </ul>
+        <p><em>Note: Many people with SDB don’t realize they’re waking up throughout the night.</em></p>
+      </div>
+    </section>
+
+    <section class="fade-in">
+      <div>
+        <h2>Why It Matters</h2>
+        <p>Left untreated, sleep-disordered breathing can:</p>
+        <ul>
+          <li>Disrupt your body’s natural sleep cycles</li>
+          <li>Lead to serious health issues such as:
+            <ul>
+              <li>High blood pressure</li>
+              <li>Heart attack or heart failure</li>
+              <li>Stroke</li>
+              <li>Type 2 diabetes</li>
+              <li>Atrial fibrillation (irregular heartbeat)</li>
+            </ul>
+          </li>
+          <li>Increase your risk of drowsy driving or workplace accidents</li>
+          <li>Decrease overall quality of life</li>
+        </ul>
+        <p><strong>The good news is</strong> that effective treatments exist. Identifying and treating SDB can lead to better sleep, more energy, improved mood, and long-term health benefits.</p>
+      </div>
+    </section>
   </div>
-  <div class="floating-box">
-    <strong>Snoring Facts:</strong>
-    <ul>
-      <li>Often worsens with age and weight gain</li>
-      <li>More common in men and those with nasal congestion</li>
-      <li>Can be an early warning sign of OSA</li>
-    </ul>
-  </div>
-</div>
 
-<div class="sdb-grid">
-  <div class="text">
-    <p><strong>Upper Airway Resistance Syndrome (UARS):</strong> A condition where the airway narrows slightly during sleep, causing increased effort to breathe. Though oxygen levels typically remain stable, this leads to repeated arousals (micro-awakenings), resulting in <em>unrefreshing sleep and daytime fatigue</em>.</p>
-  </div>
-  <div class="floating-box">
-    <strong>Causes:</strong>
-    <ul>
-      <li>Small jaw or narrow airway anatomy</li>
-      <li>Increased nasal resistance or turbinate hypertrophy</li>
-      <li>More common in younger, thinner individuals</li>
-    </ul>
-  </div>
-</div>
-
-<div class="sdb-grid">
-  <div class="text">
-    <p><strong><em>Obstructive Sleep Apnea (OSA):</em></strong> A more serious condition where the airway becomes partially or completely blocked repeatedly during sleep. These episodes can last 10 seconds or longer, leading to <em>reduced oxygen levels</em>, poor sleep quality, and long-term health risks. OSA severity is measured by the <strong>Apnea-Hypopnea Index (AHI)</strong> on a sleep study.</p>
-  </div>
-  <div class="floating-box">
-    <strong>Did you know?</strong>
-    <ul>
-      <li>OSA affects over 20 million Americans, but many are undiagnosed</li>
-      <li>Risk factors include obesity, neck circumference &gt;17 inches in men</li>
-      <li>Untreated OSA increases the risk of hypertension and stroke</li>
-    </ul>
-  </div>
-</div>
-    
-  <div class="card-section">
-    <h2 class="section-title">Common Symptoms</h2>
-    <ul>
-      <li>Loud, chronic snoring</li>
-      <li>Excessive daytime fatigue</li>
-      <li>Morning headaches</li>
-      <li>Dry mouth or sore throat upon waking</li>
-      <li>Waking up gasping or choking</li>
-      <li>Trouble staying asleep or frequent awakenings</li>
-      <li>Brain fog or memory and focus issues</li>
-      <li>Mood changes, such as irritability or depression</li>
-      <li>Decreased libido</li>
-      <li>Difficulty losing weight</li>
-    </ul>
-    <p><em>Note: Many people with SDB don’t realize they’re waking up throughout the night.</em></p>
-  </div>
-
-  <div class="card-section">
-    <h2 class="section-title">Why It Matters</h2>
-    <div class="highlight-box">
-  <p>Left untreated, sleep-disordered breathing can:</p>
-  <ul>
-    <li>Disrupt your body’s natural sleep cycles</li>
-    <li>Lead to serious health issues:
-      <ul>
-        <li>High blood pressure</li>
-        <li>Heart attack or heart failure</li>
-        <li>Stroke</li>
-        <li>Type 2 diabetes</li>
-        <li>Atrial fibrillation (irregular heartbeat)</li>
-      </ul>
-    </li>
-    <li>Increase your risk of drowsy driving or workplace accidents</li>
-    <li><strong>Decrease</strong> overall quality of life</li>
-  </ul>
-  <p><strong>The good news:</strong> Identifying and treating SDB can lead to better sleep, more energy, improved mood, and long-term health benefits.</p>
-</div>
-  </div>
-
-</main>
-
-<footer>
-  <p>Capital ENT & Sinus Center © 2024<br>
-    <a href="https://www.capitalent.com">www.capitalent.com</a>
-  </p>
-</footer>
-
+  <footer class="site-footer">
+    <p>Capital ENT & Sinus Center © 2025<br>
+      <a href="https://www.capitalent.com">www.capitalent.com</a>
+    </p>
+  </footer>
 </body>
 </html>
