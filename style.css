@@ -1,465 +1,565 @@
-
+/* Base styles */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #111;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Existing font */
+    background: #fff; /* Existing background */
+    color: #111; /* Existing text color */
+    line-height: 1.6;
 }
 
+/* Utility class to hide elements visually but keep them accessible */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Micro Banner at the top */
+.micro-banner {
+    background: #f5f7fa;
+    color: #003366;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.micro-banner a {
+    color: #c8102e;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Top Bar with contact info/links */
 .top-bar {
-  background: #000;
-  color: #fff;
-  font-size: 14px;
-  padding: 6px 20px;
-  text-align: right;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 20px;
+    text-align: right;
 }
 
 .top-bar a {
-  color: #fff;
-  text-decoration: underline;
+    color: #fff;
+    text-decoration: underline;
 }
 
+/* Header section containing logo and navigation */
 header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
-.logo-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
+/* Logo styling */
 .logo {
-  height: 64px;
+    height: 50px;
+    display: block;
 }
 
+/* Desktop Navigation container */
 nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
+/* Desktop Navigation links */
 nav a {
-  text-decoration: none;
-  color: #001f4d;
-  font-weight: 600;
-  padding: 8px 4px;
-  transition: color 0.2s ease, border-bottom 0.2s ease;
-  border-bottom: 2px solid transparent;
+    text-decoration: none;
+    color: #001f4d; /* Existing color */
+    font-weight: 600;
+    padding: 8px 4px;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 2px solid transparent;
 }
 
+/* Active nav link style */
+nav a.active {
+    color: #c8102e; /* Existing color */
+    border-bottom: 2px solid #c8102e; /* Existing style */
+}
+
+
+/* Desktop Navigation link hover state */
 nav a:hover {
-  color: #c8102e;
-  border-bottom: 2px solid #c8102e;
+    color: #c8102e; /* Existing color */
+    border-bottom: 2px solid #c8102e; /* Existing style */
 }
 
+/* Mobile Menu Toggle Button - Hidden on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #001f4d; /* Existing color */
+    padding: 5px;
+}
+
+/* Hero section styling */
 .hero {
-  background-color: #354A5F;
-  color: white;
-  padding: 35px 20px;
-  text-align: center;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 400;
-  line-height: 1.4;
+    background: #1b2a52; /* Existing color */
+    color: #fff; /* Existing color */
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  font-family: 'Merriweather', serif;
-  font-weight: 400;
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    /* --- NEW: Apply Merriweather font --- */
+    font-family: 'Merriweather', serif; /* Use Merriweather, fallback to generic serif */
+    /* --- End NEW --- */
 }
 
 .hero p {
-  font-size: 1.1rem;
-  opacity: 0.8;
+    font-size: 1.1em;
+    margin: 0 0 20px 0;
+    /* Ensure paragraph text uses the body font unless specified otherwise */
+    font-family: Arial, sans-serif;
 }
 
+/* Call to Action button styling (if used) */
 .cta-button {
-  background-color: #c8102e;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
+    background-color: #c8102e; /* Existing color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-block;
 }
 
+/* Main content container */
 .container {
-  max-width: 1140px;
-  margin: 40px auto;
-  padding: 0 20px;
+    max-width: 1140px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+/* Card Grid layout (Homepage) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
 }
 
+/* Individual card styling (Homepage) */
 .card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 20px;
-  width: calc(33% - 20px);
-  min-width: 280px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .card h3 {
-  margin-top: 0;
-  font-size: 1.1em;
-  color: #001f4d;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #001f4d; /* Existing color */
 }
 
 .card p {
-  font-size: 0.95em;
-  margin-bottom: 12px;
+    font-size: 0.95em;
+    margin-bottom: 12px;
+    flex-grow: 1;
 }
 
 .card a {
-  font-weight: bold;
-  color: #001f4d;
-  text-decoration: underline;
+    font-weight: bold;
+    color: #001f4d; /* Existing color */
+    text-decoration: underline;
+    margin-top: auto;
+    display: inline-block;
 }
 
+/* Footer styling */
 footer {
-  background: #f2f2f2;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
+    background: #f2f2f2;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    margin-top: 40px;
 }
 
-.micro-banner {
-  background: #f5f7fa;
-  color: #003366;
-  font-size: 0.9rem;
-  padding: 10px 20px;
-  text-align: center;
-  border-bottom: 1px solid #d3d3d3;
-  line-height: 1.4;
+/* Highlight box styling (Homepage) */
+.highlight-box {
+    background: #f5f7fa;
+    border-left: 4px solid #c8102e; /* Existing style */
+    padding: 16px 20px;
+    margin: 0 auto 40px;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #001f4d; /* Existing color */
+    max-width: 960px;
+    box-sizing: border-box;
 }
-.micro-banner a {
-  color: #c8102e;
-  text-decoration: underline;
-  font-weight: bold;
-}
+
+/* ================================== */
+/* Styles for Treatment Options Page  */
+/* (Assuming these classes exist in your HTML) */
+/* ================================== */
 .treatment-block {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  margin-bottom: 60px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 40px; /* Added margin */
 }
 
 .treatment-block img {
-  width: 220px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 220px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Prevent image from shrinking */
 }
 
-.treatment-block p {
-  margin-top: 0;
-  margin-bottom: 16px;
-  line-height: 1.6;
+.treatment-block .content { /* Assuming text content is wrapped in a div */
+    flex: 1;
 }
 
-.treatment-box {
-  background: #f9f9f9;
-  border-left: 4px solid #c8102e;
-  padding: 16px;
-  font-size: 0.95em;
-  line-height: 1.5;
+.treatment-box { /* Style for the box within the treatment block */
+    background: #f9f9f9;
+    border-left: 4px solid #c8102e; /* Existing style */
+    padding: 16px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-top: 15px; /* Add space if needed */
 }
+
 .comparison-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px; /* Added margin */
 }
 
 .comparison-card {
-  flex: 1;
-  min-width: 300px;
-  background: #f9f9f9;
-  border-radius: 6px;
-  padding: 20px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  border-left: 4px solid #1b2a52;
+    flex: 1; /* Allow cards to grow */
+    min-width: 300px; /* Minimum width before wrapping */
+    max-width: 45%; /* Prevent cards from getting too wide on medium screens */
+    background: #f9f9f9;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    border-left: 4px solid #1b2a52; /* Existing style */
+    box-sizing: border-box;
 }
 
 .comparison-card h3 {
-  margin-top: 0;
-  color: #001f4d;
-  font-size: 1.1em;
+    margin-top: 0;
+    color: #001f4d; /* Existing color */
+    font-size: 1.1em;
 }
 
 .comparison-card ul {
-  padding-left: 20px;
-  line-height: 1.6;
-}
-.homepage .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  margin: 40px auto;
-  max-width: 1000px;
-  padding: 0 20px;
+    padding-left: 20px;
+    line-height: 1.6;
+    margin-bottom: 0; /* Remove default bottom margin */
 }
 
-.homepage .card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  line-height: 1.6;
-}
+/* ================================== */
+/* Styles for Resources Page Layout   */
+/* ================================== */
 
-.homepage .card h3 {
-  margin-top: 0;
-  font-size: 1.1em;
-  color: #001f4d;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.homepage .card p {
-  font-size: 0.95em;
-  margin-bottom: 12px;
-}
-
-.homepage .card a {
-  font-weight: bold;
-  color: #001f4d;
-  text-decoration: underline;
-}
-.highlight-box {
-  background: #f5f7fa;
-  border-left: 4px solid #c8102e;
-  padding: 16px 20px;
-  margin: 20px auto 20px;
-  max-width: 960px;
-  font-size: 1em;
-  line-height: 1.6;
-  color: #001f4d;
-}
-.floating-box {
-  background-color: #f9f9f9;
-  border-left: 4px solid #c8102e;
-  padding: 16px 20px;
-  margin: 24px 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  line-height: 1.7;
-}
-
-.floating-box h3 {
-  margin-top: 0;
-  font-size: 1.1em;
-  color: #001f4d;
-}
-p {
-  line-height: 1.7;
-}
-li {
-  line-height: 1.7
-}
-.card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.info-card {
-  background: #ffffff;
-  border: 1px solid #e1e5ea;
-  border-radius: 10px;
-  padding: 20px;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
-}
-
-.info-card:hover {
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-  transform: translateY(-3px);
-  cursor: pointer;
-}
-
-.info-card h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #001f4d;
-}
-
-.info-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #333f4f;
-}
-.fade-in {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeIn 0.6s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-/* Add this to your main CSS (style.css) to improve mobile responsiveness */
-
-/* Ensure body content scales properly */
-body {
-  font-size: 16px;
-  line-height: 1.6;
-  word-wrap: break-word;
-  overflow-x: hidden;
-}
-
-/* Make images and iframes responsive */
-img, iframe {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Responsive header navigation */
-.logo-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-nav {
-  display: flex;
-  gap: 20px;
-}
-
-/* Adjust hero section */
-.hero {
-  padding: 24px 16px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 1.8rem;
-}
-
-.hero p {
-  font-size: 1rem;
-}
-
-/* Adjust floating boxes for contact and treatment cards */
-.floating-box {
-  padding: 16px;
-  margin: 20px 0;
-}
-
-/* Contact grid becomes one-column on small screens */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-/* Sidebar layout stacks on small screens */
+/* --- Desktop Styles for Resources Page --- */
 .resources-container {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
 }
 
 .sidebar {
-  width: 250px;
-  margin-right: 40px;
-  border-right: 1px solid #ccc;
-  padding-right: 20px;
+    width: 250px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.sidebar h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #001f4d; /* Existing color */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+.sidebar li strong {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Existing color */
+    font-size: 0.95em;
+}
+.sidebar li:first-child strong {
+    margin-top: 0;
+}
+
+
+.sidebar a {
+    color: #001f4d; /* Existing color */
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    display: block;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+    color: #c8102e; /* Existing color */
+    text-decoration: underline;
 }
 
 .article-display {
-  flex: 1;
-  padding: 0 20px;
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
-/* Card grid becomes single column */
-.card-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.article-display h2 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #001f4d; /* Existing color */
 }
-
-/* Accordion buttons adjust for touch */
-.accordion {
-  font-size: 1rem;
-  padding: 14px 16px;
+/* Basic styling for content loaded into article-display */
+.article-display h3 {
+    font-size: 1.4em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #1b2a52; /* Existing color */
 }
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-  .logo-nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .resources-container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    display: none;
-  }
-
-  .article-display {
-    padding: 0 16px;
-  }
-
-  .article-display h2 {
-    font-size: 1.4rem;
-  }
-
-  .article-display p,
-  .article-display li {
-    font-size: 1rem;
+.article-display p {
+    margin-bottom: 1em;
     line-height: 1.7;
-  }
-} 
+}
+.article-display ul,
+.article-display ol {
+    margin-bottom: 1em;
+    padding-left: 25px;
+}
+.article-display li {
+    margin-bottom: 0.5em;
+}
 
-@media (min-width: 769px) {
-  .logo-nav {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+/* ================================== */
+/* Styles for FAQs Page (using details/summary) */
+/* (Add these if you update FAQ HTML) */
+/* ================================== */
+details {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
 
-  .resources-container {
-    flex-direction: row;
-  }
+summary {
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  color: #001f4d; /* Existing color */
+  list-style: none; /* Remove default marker */
+  position: relative;
+}
+summary::-webkit-details-marker { display: none; } /* Hide marker for Chrome/Safari */
+summary::marker { display: none; } /* Hide marker for Firefox */
 
-  .sidebar {
-    display: block;
-  }
+summary::after { /* Add custom arrow */
+    content: '+';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #001f4d;
+}
 
-  .article-display {
-    padding: 0 20px;
-  }
+details[open] summary::after {
+    content: '−'; /* Change to minus when open */
+}
 
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 
-  .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+details > div { /* Style for the content inside details */
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+
+/* ================================== */
+/* Mobile Styles (screens <= 768px)   */
+/* ================================== */
+@media (max-width: 768px) {
+    /* --- General Mobile Adjustments --- */
+    header {
+        padding: 10px 15px;
+    }
+    .logo {
+        height: 40px;
+    }
+    .menu-toggle {
+        display: block; /* Show hamburger button */
+    }
+    nav { /* Mobile nav base styles (hidden initially) */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+        padding: 10px 0;
+        gap: 0;
+    }
+    nav.show { /* Style for when mobile menu is toggled visible */
+        display: flex;
+    }
+    nav a { /* Mobile nav links */
+        padding: 12px 20px;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        text-align: left;
+        box-sizing: border-box;
+        border-left: 3px solid transparent; /* Space for hover/active indicator */
+        border-bottom-color: #eee; /* Explicitly set */
+        color: #001f4d; /* Ensure color is set */
+        font-weight: 500; /* Slightly lighter weight for mobile list */
+        transition: background-color 0.2s ease, border-left-color 0.2s ease; /* Add transitions */
+    }
+    /* --- Mobile Nav Link Feedback --- */
+    nav a.active { /* Active mobile nav link */
+        background-color: #f5f7fa; /* Light background for active */
+        border-left: 3px solid #c8102e; /* Red indicator */
+        color: #c8102e; /* Red text */
+        font-weight: bold; /* Make active link bold */
+    }
+    nav a:hover,
+    nav a:focus { /* Mobile nav link hover/focus */
+         background-color: #f5f7fa; /* Use same light background on hover/focus */
+         border-left: 3px solid #c8102e; /* Red indicator */
+         color: #c8102e; /* Red text */
+    }
+    /* --- End Mobile Nav Link Feedback --- */
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+    .hero h1 {
+        font-size: 1.8em; /* Adjust size for mobile */
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .container {
+        padding: 0 15px; /* Reduce side padding */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .highlight-box {
+        margin-left: 0;
+        margin-right: 0;
+        border-left-width: 3px;
+        /* --- Mobile Margin Adjustment --- */
+        margin-top: 25px;
+        margin-bottom: 30px;
+        /* --- End Mobile Margin Adjustment --- */
+     }
+
+    /* --- Mobile Styles for Treatment Options Page --- */
+    .treatment-block {
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center items */
+        gap: 15px; /* Adjust gap */
+    }
+    .treatment-block img {
+        width: 100%; /* Allow image to take width */
+        max-width: 300px; /* Limit max width */
+        margin: 0 auto 15px; /* Center image and add bottom margin */
+    }
+    .comparison-row {
+        gap: 15px; /* Adjust gap */
+    }
+    .comparison-card {
+        min-width: 90%; /* Ensure card takes most width */
+        width: 90%; /* Fallback width */
+        max-width: 100%; /* Override desktop max-width */
+        margin: 0 auto; /* Center cards */
+    }
+    /* --- End Treatment Options Mobile --- */
+
+
+    /* --- Mobile Styles for Resources Page --- */
+    .resources-container {
+        flex-direction: column; /* Stack sidebar and article vertically */
+        gap: 0; /* Remove gap */
+    }
+
+    .sidebar {
+        width: 100%; /* Make sidebar take full width */
+        border-right: none; /* Remove side border */
+        padding-right: 0; /* Remove side padding */
+        border-bottom: 1px solid #ddd; /* Add bottom border for separation */
+        padding-bottom: 15px; /* Add padding below sidebar content */
+        margin-bottom: 25px; /* Add margin below sidebar */
+        flex-shrink: initial; /* Reset shrink property */
+    }
+
+    .sidebar h3 {
+        font-size: 1.1em; /* Slightly smaller heading on mobile */
+        margin-bottom: 10px; /* Adjust space below heading */
+        padding-bottom: 5px; /* Adjust padding below heading */
+        border-bottom-width: 1px; /* Ensure border is visible */
+    }
+
+    .article-display {
+       width: 100%; /* Ensure article takes full width */
+    }
+    /* --- End Resources Mobile --- */
+
+    /* --- Mobile Styles for FAQs Page (using details/summary) --- */
+    summary {
+        padding: 8px 12px; /* Adjust padding */
+    }
+    summary::after {
+        right: 12px; /* Adjust arrow position */
+    }
+    details > div {
+        padding: 12px; /* Adjust content padding */
+    }
+    /* --- End FAQs Mobile --- */
 }
