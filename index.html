@@ -16,20 +16,21 @@
     Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
   </div>
 
-  <header>
-    <div class="logo-nav">
-      <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="understanding.html">Understanding SDB</a>
-        <a href="approach.html">Our Approach</a>
-        <a href="treatment.html">Treatment Options</a>
-        <a href="resources.html">Resources</a>
-        <a href="faqs.html">FAQs</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="logo-nav">
+    <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="understanding.html">Understanding SDB</a>
+      <a href="approach.html">Our Approach</a>
+      <a href="treatment.html">Treatment Options</a>
+      <a href="resources.html">Resources</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
   <section class="hero">
     <h1>Welcome to Your Sleep Care Hub</h1>
@@ -75,5 +76,11 @@
   <footer>
     <p>Capital ENT & Sinus Center © 2024<br><a href="https://www.capitalent.com">www.capitalent.com</a></p>
   </footer>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('mainNav');
+    nav.classList.toggle('show');
+  }
+</script>
 </body>
 </html>
