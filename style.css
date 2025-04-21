@@ -118,8 +118,9 @@ nav a:hover {
 
 .hero p {
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 1.1rem;
+  opacity: 0.9;
   margin: 0 0 20px 0; /* Simplified margin */
 }
 
