@@ -103,20 +103,24 @@ nav a:hover {
 
 /* Hero section styling */
 .hero {
-    background: #1b2a52; /* Dark blue background */
+    background: #354A5F; /* Dark blue background */
     color: #fff; /* White text */
     text-align: center;
     padding: 40px 20px;
 }
 
 .hero h1 {
-    margin: 0 0 10px 0; /* Added bottom margin */
-    font-size: 2em;
+  font-family: 'Merriweather', serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin: 0 0 20px 0; /* Simplified margin */
 }
 
 .hero p {
-    font-size: 1.1em;
-    margin: 0 0 20px 0; /* Simplified margin */
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 20px 0; /* Simplified margin */
 }
 
 /* Call to Action button styling (if used) */
