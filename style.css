@@ -1,298 +1,114 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #111;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sleep Care Hub | Capital ENT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .hamburger {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #001f4d;
+    }
 
-.top-bar {
-  background: #000;
-  color: #fff;
-  font-size: 14px;
-  padding: 6px 20px;
-  text-align: right;
-}
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      nav.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="micro-banner">
+    This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
+    <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
+  </div>
 
-.top-bar a {
-  color: #fff;
-  text-decoration: underline;
-}
+  <div class="top-bar">
+    Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
+  </div>
 
-header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  <header>
+    <div class="logo-nav">
+      <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
+      <button class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="understanding.html">Understanding SDB</a>
+        <a href="approach.html">Our Approach</a>
+        <a href="treatment.html">Treatment Options</a>
+        <a href="resources.html">Resources</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-.logo-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  flex-wrap: wrap;
-}
+  <section class="hero">
+    <h1>Welcome to Your Sleep Care Hub</h1>
+    <p>Personalized tools, treatment info, and resources to help you breathe easier and sleep better.</p>
+  </section>
 
-.logo {
-  height: 64px;
-}
+  <main class="container cards">
+    <div class="highlight-box">
+      <p><strong>This site complements the folder you received in clinic.</strong> It contains educational materials, digital tools, and follow-up guidance personalized to your needs.</p>
+    </div>
 
-nav {
-  display: flex;
-  gap: 20px;
-}
+    <main class="homepage">
+      <div class="card-grid">
+        <div class="card">
+          <h3>💡 Understanding Your Diagnosis</h3>
+          <p>Learn about the different types of sleep-disordered breathing and how they affect your health.</p>
+          <a href="understanding.html">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>⚙️ Compare Treatment Options</h3>
+          <p>See how CPAP, oral appliances, Inspire, and other therapies work — and which might be right for you.</p>
+          <a href="treatment.html">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>📍 Next Steps in Your Journey</h3>
+          <p>Understand the process ahead: sleep testing, treatment planning, and ongoing care with our team.</p>
+          <a href="approach.html">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>📄 Helpful Resources</h3>
+          <p>Access downloadable guides, checklists, and product recommendations curated by our team.</p>
+          <a href="resources.html">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>❓ Common Questions</h3>
+          <p>Answers to FAQs we hear from patients about sleep apnea, testing, and treatment options.</p>
+          <a href="faqs.html">Learn More</a>
+        </div>
+      </div>
+    </main>
+  </main>
 
-nav a {
-  text-decoration: none;
-  color: #001f4d;
-  font-weight: 600;
-  padding: 8px 4px;
-  transition: color 0.2s ease, border-bottom 0.2s ease;
-  border-bottom: 2px solid transparent;
-}
+  <footer>
+    <p>Capital ENT & Sinus Center © 2024<br><a href="https://www.capitalent.com">www.capitalent.com</a></p>
+  </footer>
 
-nav a:hover {
-  color: #c8102e;
-  border-bottom: 2px solid #c8102e;
-}
-
-.hero {
-  background: #1b2a52;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-.hero p {
-  font-size: 1.1em;
-  margin: 12px 0 20px;
-}
-
-.cta-button {
-  background-color: #c8102e;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-.container {
-  max-width: 1140px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 20px;
-  width: calc(33% - 20px);
-  min-width: 280px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.card h3 {
-  margin-top: 0;
-  font-size: 1.1em;
-  color: #001f4d;
-}
-
-.card p {
-  font-size: 0.95em;
-  margin-bottom: 12px;
-}
-
-.card a {
-  font-weight: bold;
-  color: #001f4d;
-  text-decoration: underline;
-}
-
-footer {
-  background: #f2f2f2;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
-}
-
-.micro-banner {
-  background: #f5f7fa;
-  color: #003366;
-  font-size: 0.9rem;
-  padding: 10px 20px;
-  text-align: center;
-  border-bottom: 1px solid #d3d3d3;
-}
-
-.micro-banner a {
-  color: #c8102e;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-.treatment-block {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  margin-bottom: 60px;
-}
-
-.treatment-block img {
-  width: 220px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.treatment-block p {
-  margin-top: 0;
-  margin-bottom: 16px;
-  line-height: 1.6;
-}
-
-.treatment-box {
-  background: #f9f9f9;
-  border-left: 4px solid #c8102e;
-  padding: 16px;
-  font-size: 0.95em;
-  line-height: 1.5;
-}
-
-.comparison-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.comparison-card {
-  flex: 1;
-  min-width: 300px;
-  background: #f9f9f9;
-  border-radius: 6px;
-  padding: 20px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  border-left: 4px solid #1b2a52;
-}
-
-.comparison-card h3 {
-  margin-top: 0;
-  color: #001f4d;
-  font-size: 1.1em;
-}
-
-.comparison-card ul {
-  padding-left: 20px;
-  line-height: 1.6;
-}
-
-.homepage .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  margin: 40px auto;
-  max-width: 1000px;
-  padding: 0 20px;
-}
-
-.homepage .card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  line-height: 1.6;
-}
-
-.homepage .card h3 {
-  margin-top: 0;
-  font-size: 1.1em;
-  color: #001f4d;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.homepage .card p {
-  font-size: 0.95em;
-  margin-bottom: 12px;
-}
-
-.homepage .card a {
-  font-weight: bold;
-  color: #001f4d;
-  text-decoration: underline;
-}
-
-.highlight-box {
-  background: #f5f7fa;
-  border-left: 4px solid #c8102e;
-  padding: 16px 20px;
-  margin: 20px auto 40px;
-  max-width: 960px;
-  font-size: 1em;
-  line-height: 1.6;
-  color: #001f4d;
-}
-
-.floating-box {
-  background-color: #f9f9f9;
-  border-left: 4px solid #c8102e;
-  padding: 16px 20px;
-  margin: 24px 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  line-height: 1.7;
-}
-
-.floating-box h3 {
-  margin-top: 0;
-  font-size: 1.1em;
-  color: #001f4d;
-}
-
-p {
-  line-height: 1.7;
-}
-
-@media (max-width: 768px) {
-  .logo-nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 12px;
-    gap: 12px;
-  }
-
-  nav a {
-    display: block;
-    width: 100%;
-    padding: 4px 0;
-  }
-
-  .homepage .card-grid {
-    grid-template-columns: 1fr;
-  }
-}
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
