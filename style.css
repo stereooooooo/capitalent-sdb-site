@@ -319,3 +319,97 @@ li {
     transform: none;
   }
 }
+/* Ensure body content scales properly */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+/* Make images and iframes responsive */
+img, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive header navigation */
+.logo-nav {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+nav {
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Adjust hero section */
+.hero {
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+/* Adjust floating boxes for contact and treatment cards */
+.floating-box {
+  padding: 16px;
+  margin: 20px 0;
+}
+
+/* Contact grid becomes one-column on small screens */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Sidebar layout stacks on small screens */
+.resources-container {
+  flex-direction: column;
+}
+
+.sidebar {
+  width: 100%;
+  margin-right: 0;
+  border-right: none;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+}
+
+.article-display {
+  padding: 0;
+}
+
+/* Card grid becomes single column */
+.card-grid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Accordion buttons adjust for touch */
+.accordion {
+  font-size: 1rem;
+  padding: 14px 16px;
+}
+
+@media (min-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .resources-container {
+    flex-direction: row;
+  }
+}
