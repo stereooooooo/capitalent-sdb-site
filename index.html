@@ -18,9 +18,14 @@
   </div>
 
   <header>
-    <div class="logo-nav">
-      <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
-      <nav>
+      <a href="index.html" class="logo-link"> <img src="https://placehold.co/250x64/001f4d/ffffff?text=Capital+ENT+Logo" alt="Capital ENT & Sinus Center Logo" class="logo" />
+      </a>
+
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+          ☰
+          <span class="sr-only">Menu</span> </button>
+
+      <nav id="mainNav">
         <a href="index.html" class="active">Home</a>
         <a href="understanding.html">Understanding SDB</a>
         <a href="approach.html">Our Approach</a>
@@ -29,7 +34,6 @@
         <a href="faqs.html">FAQs</a>
         <a href="contact.html">Contact</a>
       </nav>
-    </div>
   </header>
 
   <section class="hero">
@@ -37,52 +41,82 @@
     <p>Personalized tools, treatment info, and resources to help you breathe easier and sleep better.</p>
   </section>
 
-  <main class="container cards fade-in">
+  <main class="container fade-in">
     <div class="highlight-box">
-  <p><strong>This site complements the folder you received in clinic.</strong> It contains educational materials, digital tools, and follow-up guidance personalized to your needs.</p>
-</div>
-    <main class="homepage">
-<div class="card-grid">
-  <a href="understanding.html" class="card-link">
-    <div class="info-card">
-      <h3>💡 Understanding Your Diagnosis</h3>
-      <p>Learn about the different types of sleep-disordered breathing and how they affect your health.</p>
+      <p><strong>This site complements the folder you received in clinic.</strong> It contains educational materials, digital tools, and follow-up guidance personalized to your needs.</p>
     </div>
-  </a>
-
-  <a href="treatment.html" class="card-link">
-    <div class="info-card">
-      <h3>⚙️ Compare Treatment Options</h3>
-      <p>See how CPAP, oral appliances, Inspire, and other therapies work — and which might be right for you.</p>
-    </div>
-  </a>
-
-  <a href="approach.html" class="card-link">
-    <div class="info-card">
-      <h3>📍 Next Steps in Your Journey</h3>
-      <p>Understand the process ahead: sleep testing, treatment planning, and ongoing care with our team.</p>
-    </div>
-  </a>
-
-  <a href="resources.html" class="card-link">
-    <div class="info-card">
-      <h3>📄 Helpful Resources</h3>
-      <p>Access downloadable guides, checklists, and product recommendations curated by our team.</p>
-    </div>
-  </a>
-
-  <a href="faqs.html" class="card-link">
-    <div class="info-card">
-      <h3>❓ Common Questions</h3>
-      <p>Answers to FAQs we hear from patients about sleep apnea, testing, and treatment options.</p>
-    </div>
-  </a>
-</div>
-</main>
-  </main>
-
-  <footer>
+    <div class="card-grid">
+      <a href="understanding.html" class="card-link">
+        <div class="info-card">
+          <h3>💡 Understanding Your Diagnosis</h3>
+          <p>Learn about the different types of sleep-disordered breathing and how they affect your health.</p>
+        </div>
+      </a>
+      <a href="treatment.html" class="card-link">
+        <div class="info-card">
+          <h3>⚙️ Compare Treatment Options</h3>
+          <p>See how CPAP, oral appliances, Inspire, and other therapies work — and which might be right for you.</p>
+        </div>
+      </a>
+      <a href="approach.html" class="card-link">
+        <div class="info-card">
+          <h3>📍 Next Steps in Your Journey</h3>
+          <p>Understand the process ahead: sleep testing, treatment planning, and ongoing care with our team.</p>
+        </div>
+      </a>
+      <a href="resources.html" class="card-link">
+        <div class="info-card">
+          <h3>📄 Helpful Resources</h3>
+          <p>Access downloadable guides, checklists, and product recommendations curated by our team.</p>
+        </div>
+      </a>
+      <a href="faqs.html" class="card-link">
+        <div class="info-card">
+          <h3>❓ Common Questions</h3>
+          <p>Answers to FAQs we hear from patients about sleep apnea, testing, and treatment options.</p>
+        </div>
+      </a>
+    </div> </main> <footer>
     <p>Capital ENT & Sinus Center © 2025<br><a href="https://www.capitalent.com">www.capitalent.com</a></p>
   </footer>
+
+  <script>
+      /**
+       * Toggles the visibility of the mobile navigation menu.
+       * Manages the 'show' class and ARIA attributes for accessibility.
+       */
+      function toggleMenu() {
+          const nav = document.getElementById('mainNav');
+          const toggleButton = document.querySelector('.menu-toggle');
+          // Toggle the 'show' class; 'isExpanded' will be true if the class was added, false if removed.
+          const isExpanded = nav.classList.toggle('show');
+
+          // Update ARIA attribute to reflect the menu's current state (expanded or collapsed).
+          toggleButton.setAttribute('aria-expanded', isExpanded);
+      }
+
+      /**
+       * Adds a global click listener to close the mobile menu if a click occurs
+       * outside the menu itself or the toggle button.
+       */
+      document.addEventListener('click', function(event) {
+          const nav = document.getElementById('mainNav');
+          // Check if nav exists before proceeding
+          if (!nav) return;
+
+          const toggleButton = document.querySelector('.menu-toggle');
+          // Check if toggleButton exists before proceeding
+          if (!toggleButton) return;
+
+
+          // Check if the menu is currently shown and if the click target is outside both elements.
+          if (nav.classList.contains('show') && !nav.contains(event.target) && !toggleButton.contains(event.target)) {
+              // Hide the menu by removing the 'show' class.
+              nav.classList.remove('show');
+              // Update the ARIA attribute on the toggle button.
+              toggleButton.setAttribute('aria-expanded', 'false');
+          }
+      });
+  </script>
 </body>
 </html>
