@@ -401,15 +401,8 @@ img, iframe {
   gap: 30px; /* Adjust gap as needed */
   margin-bottom: 48px;
   align-items: flex-start;
-  border-top: 1px solid #eee; /* Add separator */
-  padding-top: 32px;
+  /* Removed border-top and padding-top from the section itself */
 }
-/* First section doesn't need top border/padding */
-.container > .content-section:first-of-type {
-    border-top: none;
-    padding-top: 0;
-}
-
 
 .content-section .main-content {
   flex: 2; /* Give main content more space */
@@ -418,14 +411,12 @@ img, iframe {
 
 .content-section .floating-box {
   flex: 1; /* Allow floating box to take space */
-  background-color: #f9f9fc; /* Style from inline */
-  border-left: 4px solid #c8102e; /* Style from inline */
-  padding: 16px 20px; /* Style from inline */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Style from inline */
-  border-radius: 4px; /* Style from inline */
+  background-color: #f9f9fc; /* Style from original inline */
+  border-left: 4px solid #c8102e; /* Style from original inline */
+  padding: 16px 20px; /* Style from original inline */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Style from original inline */
+  border-radius: 4px; /* Style from original inline */
   box-sizing: border-box;
-  /* Remove margin if gap provides enough space */
-  /* margin: 24px 0; */
 }
 
 /* Style for sections that should span full width (like Symptoms, Why It Matters) */
@@ -441,15 +432,23 @@ img, iframe {
 }
 
 
+/* Apply original H2 styling (border/padding) to H2s within content sections */
 .content-section h2 {
   font-size: 1.6rem; /* Adjust heading size */
-  margin-top: 0;
+  margin-top: 0; /* Keep margin-top 0 */
   margin-bottom: 15px; /* Add space below heading */
   color: #001f4d;
-  /* Remove border/padding from inline style, handled by .content-section */
-  border-top: none;
-  padding-top: 0;
+  /* Restore border/padding from original inline style */
+  border-top: 1px solid #ddd;
+  padding-top: 32px;
 }
+
+/* Remove top border/padding from the H2 in the VERY FIRST content section */
+.container > .content-section:first-of-type h2 {
+    border-top: none;
+    padding-top: 0;
+}
+
 
 .floating-box h3 {
   margin-top: 0;
@@ -651,6 +650,8 @@ img, iframe {
         gap: 20px; /* Adjust vertical gap */
         padding-top: 24px; /* Adjust padding */
         margin-bottom: 30px; /* Adjust margin */
+        /* Ensure border doesn't apply on mobile between stacked items */
+        border-top: none;
     }
     
     .content-section .main-content,
@@ -659,13 +660,23 @@ img, iframe {
         width: 100%; /* Ensure they take full width */
     }
     
+    /* Apply mobile H2 styling, including top border/padding */
     .content-section h2 {
         font-size: 1.4rem; /* Adjust heading size for mobile */
+        border-top: 1px solid #ddd; /* Ensure border exists on mobile */
+        padding-top: 24px; /* Adjust padding for mobile */
     }
+    /* Still remove border/padding for the first H2 on mobile */
+    .container > .content-section:first-of-type h2 {
+        border-top: none;
+        padding-top: 0;
+    }
+    
     
     .floating-box {
         /* Reset side margin if any was added */
         margin-left: 0;
         margin-right: 0;
     }
+
 } /* End @media (max-width: 768px) */
