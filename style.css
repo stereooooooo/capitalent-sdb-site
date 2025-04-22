@@ -257,7 +257,6 @@ img, iframe {
 
 /* ================================== */
 /* Styles for Treatment Options Page  */
-/* (Apply these if using the classes on that page) */
 /* ================================== */
 .treatment-block {
   display: flex;
@@ -315,7 +314,6 @@ img, iframe {
 
 /* ================================== */
 /* Styles for Resources Page Layout   */
-/* (Apply these if using the classes on that page) */
 /* ================================== */
 .resources-container {
   display: flex;
@@ -396,99 +394,35 @@ img, iframe {
 .article-display li {
   margin-bottom: 0.5em;
 }
-.content-section {
-  display: flex;
-  gap: 30px; /* Adjust gap as needed */
-  margin-bottom: 48px;
-  align-items: flex-start;
-  /* Removed border-top and padding-top from the section itself */
-}
 
-.content-section .main-content {
-  flex: 2; /* Give main content more space */
-  min-width: 0; /* Prevent flex overflow */
-}
-
-.content-section .floating-box {
-  flex: 1; /* Allow floating box to take space */
-  background-color: #f9f9fc; /* Style from original inline */
-  border-left: 4px solid #c8102e; /* Style from original inline */
-  padding: 16px 20px; /* Style from original inline */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Style from original inline */
-  border-radius: 4px; /* Style from original inline */
-  box-sizing: border-box;
-}
-
-/* Style for sections that should span full width (like Symptoms, Why It Matters) */
-.content-section.full-width {
-    flex-direction: column; /* Ensure content stacks */
-    gap: 15px; /* Adjust gap */
-}
-.content-section.full-width .floating-box {
-    display: none; /* Hide floating box if section is full width */
-}
-.content-section.full-width .main-content {
-    flex-basis: 100%; /* Ensure it takes full width */
-}
-
-
-/* Apply original H2 styling (border/padding) to H2s within content sections */
-.content-section h2 {
-  font-size: 1.6rem; /* Adjust heading size */
-  margin-top: 0; /* Keep margin-top 0 */
-  margin-bottom: 15px; /* Add space below heading */
-  color: #001f4d;
-  /* Restore border/padding from original inline style */
-  border-top: 1px solid #ddd;
-  padding-top: 32px;
-}
-
-/* Remove top border/padding from the H2 in the VERY FIRST content section */
-.container > .content-section:first-of-type h2 {
-    border-top: none;
-    padding-top: 0;
-}
-
-
-.floating-box h3 {
-  margin-top: 0;
-  font-size: 1.1em;
-  color: #001f4d;
-  margin-bottom: 10px;
-}
-
-.floating-box ul {
-    padding-left: 20px; /* Indent list */
-    margin-bottom: 0; /* Remove default margin */
-}
 /* ================================== */
 /* Styles for Approach Page Layout    */
-/* (Add these outside the media query) */
 /* ================================== */
 
-/* Base style for content sections on this page */
+/* Base style for content sections on Approach page */
+/* Applies bottom border/margin to all sections by default */
 .content-section {
     padding-bottom: 20px;
     margin-bottom: 40px;
     border-bottom: 1px solid #eee; /* Separator line */
 }
-.content-section:last-of-type {
-    border-bottom: none; /* Remove border from last section */
+/* Remove border/margin from the very last section within its container */
+.container > .content-section:last-of-type {
+    border-bottom: none;
     margin-bottom: 0;
 }
 
-/* Style for the first section with heading aside */
+/* DESKTOP style for the specific section with heading aside */
 .content-section--heading-aside {
-    display: flex;
+    display: flex; /* Makes heading and content side-by-side */
     gap: 30px; /* Adjust gap between heading and content */
     align-items: flex-start; /* Align items to the top */
-    /* Removed border-bottom here, apply to general .content-section instead */
-    /* border-bottom: 1px solid #eee; */
+    /* Ensure default bottom border applies */
+    border-bottom: 1px solid #eee;
 }
 
 .content-section--heading-aside .section-heading-wrapper {
     flex: 0 0 200px; /* Fixed width for heading column (adjust as needed) */
-    /* Or use percentage: flex: 0 0 25%; */
     padding-right: 20px; /* Optional padding */
 }
 
@@ -497,7 +431,7 @@ img, iframe {
     min-width: 0; /* Prevent flex overflow */
 }
 
-/* Heading style within the aside section */
+/* DESKTOP heading style within the aside section */
 .content-section--heading-aside h2 {
     font-size: 1.4rem; /* Adjust size if needed */
     margin-top: 0;
@@ -509,14 +443,19 @@ img, iframe {
     padding-top: 0;
 }
 
-/* General H2 style for other sections on the page */
+/* DESKTOP general H2 style for other sections on the page */
 /* Applied to H2s NOT inside the heading-aside layout */
 .content-section:not(.content-section--heading-aside) h2 {
     font-size: 1.6rem;
     margin-top: 0;
     margin-bottom: 20px; /* Space below heading */
     color: #001f4d;
+     /* Remove any top border/padding if applied generally */
+    border-top: none;
+    padding-top: 0;
 }
+/* --- End of Approach Page Desktop Styles --- */
+
 
 /* ================================== */
 /* Mobile Styles (screens <= 768px)   */
@@ -526,34 +465,23 @@ img, iframe {
     /* --- General Mobile Adjustments --- */
     header {
         padding: 10px 15px; /* Adjust header padding */
-        /* Remove flex-wrap from previous attempt if present */
-        /* flex-wrap: wrap; */
     }
     .logo {
         height: 40px; /* Smaller logo */
     }
     .menu-toggle {
         display: block; /* Show hamburger button */
-        /* Ensure it's ordered correctly if flex items wrap unexpectedly */
-        order: 3;
+        order: 3; /* Ensure it appears last if wrapping */
     }
 
     /* --- Mobile Navigation --- */
     nav {
         display: none; /* Hide desktop nav links by default */
-        /* Remove properties that placed it below header items */
-        /* order: 3; */
-        /* width: 100%; */
-        /* flex-basis: 100%; */
-        /* margin-top: 10px; */
     }
-    /* --- NEW: Top-Right Dropdown Style --- */
     nav.show {
         display: flex; /* Show nav when toggled */
         flex-direction: column; /* Stack links vertically */
         position: absolute; /* Position relative to header */
-        /* Position dropdown below the header */
-        /* Calculate based on header padding + logo height + bottom padding approx */
         top: 65px; /* Adjust this value based on your actual header height */
         right: 15px; /* Align to the right edge (considering header padding) */
         width: 280px; /* Set a specific width for the dropdown */
@@ -578,7 +506,6 @@ img, iframe {
         color: #001f4d;
         font-weight: 500;
         transition: background-color 0.2s ease, border-left-color 0.2s ease;
-        /* Reset potentially inherited desktop styles */
         border-bottom-style: solid;
         border-bottom-width: 1px;
     }
@@ -660,9 +587,9 @@ img, iframe {
     }
     .comparison-card {
         min-width: 90%; /* Ensure card takes most width */
-        width: 90%; /* Fallback width */
+        width: 100%; /* Use 100% width for consistency */
         max-width: 100%; /* Override desktop max-width */
-        margin: 0 auto; /* Center cards */
+        margin: 0; /* Remove auto margin */
         padding: 15px; /* Adjust padding */
     }
 
@@ -680,8 +607,7 @@ img, iframe {
         padding-bottom: 15px; /* Add padding below sidebar content */
         margin-bottom: 25px; /* Add margin below sidebar */
         flex-shrink: initial; /* Reset shrink property */
-        /* Ensure sidebar is shown */
-        display: block !important;
+        display: block !important; /* Ensure sidebar is shown */
     }
     .sidebar h3 {
         font-size: 1.1em; /* Slightly smaller heading on mobile */
@@ -701,46 +627,14 @@ img, iframe {
         font-size: 1rem; /* Adjust size */
         line-height: 1.7;
     }
-    .content-section {
-        flex-direction: column; /* Stack main content and floating box */
-        gap: 20px; /* Adjust vertical gap */
-        padding-top: 24px; /* Adjust padding */
-        margin-bottom: 30px; /* Adjust margin */
-        /* Ensure border doesn't apply on mobile between stacked items */
-        border-top: none;
-    }
-    
-    .content-section .main-content,
-    .content-section .floating-box {
-        flex-basis: auto; /* Reset flex basis */
-        width: 100%; /* Ensure they take full width */
-    }
-    
-    /* Apply mobile H2 styling, including top border/padding */
-    .content-section h2 {
-        font-size: 1.4rem; /* Adjust heading size for mobile */
-        border-top: 1px solid #ddd; /* Ensure border exists on mobile */
-        padding-top: 24px; /* Adjust padding for mobile */
-    }
-    /* Still remove border/padding for the first H2 on mobile */
-    .container > .content-section:first-of-type h2 {
-        border-top: none;
-        padding-top: 0;
-    }
-    
-    
-    .floating-box {
-        /* Reset side margin if any was added */
-        margin-left: 0;
-        margin-right: 0;
-    }
-    /* Stack the heading-aside section on mobile */
+
+    /* --- Approach Page Mobile --- */
+    /* Stack the heading-aside section */
     .content-section--heading-aside {
         flex-direction: column; /* Stack heading and content */
         gap: 10px; /* REDUCED vertical gap */
-        border-bottom: 1px solid #eee; /* Re-add bottom border for mobile separation */
+        /* border-bottom is handled by the general .content-section mobile rule below */
     }
-    
     .content-section--heading-aside .section-heading-wrapper {
         flex-basis: auto; /* Reset flex basis */
         width: 100%; /* Full width */
@@ -750,28 +644,23 @@ img, iframe {
         padding-bottom: 0;
         margin-bottom: 0;
     }
-    
     .content-section--heading-aside .section-heading-wrapper h2 {
-        /* Adjust mobile heading size if needed */
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Adjust mobile heading size if needed */
         margin-bottom: 0; /* Ensure no bottom margin on the heading itself */
         border-top: none; /* Explicitly remove top border */
         padding-top: 0; /* Explicitly remove top padding */
     }
-    
-    /* Adjust general section spacing for mobile */
+    /* Adjust general section spacing */
     .content-section {
         padding-bottom: 15px;
         margin-bottom: 30px;
     }
-    
     /* General H2 mobile style (applies to sections other than heading-aside) */
     .content-section:not(.content-section--heading-aside) h2 {
         font-size: 1.4rem; /* Adjust general H2 size for mobile */
         margin-bottom: 15px;
-        /* Add top border/padding if needed for these sections */
-        /* border-top: 1px solid #ddd; */
-        /* padding-top: 24px; */
     }
-*/
+    /* --- End Approach Page Mobile --- */
+
+
 } /* End @media (max-width: 768px) */
