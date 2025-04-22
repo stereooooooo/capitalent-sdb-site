@@ -461,6 +461,55 @@ img, iframe {
     padding-left: 20px; /* Indent list */
     margin-bottom: 0; /* Remove default margin */
 }
+/* Base style for content sections on this page */
+.content-section {
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee; /* Separator line */
+}
+.content-section:last-of-type {
+    border-bottom: none; /* Remove border from last section */
+    margin-bottom: 0;
+}
+
+/* Style for the first section with heading aside */
+.content-section--heading-aside {
+    display: flex;
+    gap: 30px; /* Adjust gap between heading and content */
+    align-items: flex-start; /* Align items to the top */
+    border-bottom: 1px solid #eee; /* Ensure border */
+}
+
+.content-section--heading-aside .section-heading-wrapper {
+    flex: 0 0 200px; /* Fixed width for heading column (adjust as needed) */
+    /* Or use percentage: flex: 0 0 25%; */
+    padding-right: 20px; /* Optional padding */
+}
+
+.content-section--heading-aside .section-content-wrapper {
+    flex: 1; /* Content takes remaining space */
+    min-width: 0; /* Prevent flex overflow */
+}
+
+/* Heading style within the aside section */
+.content-section--heading-aside h2 {
+    font-size: 1.4rem; /* Adjust size if needed */
+    margin-top: 0;
+    margin-bottom: 0; /* Remove bottom margin */
+    color: #001f4d;
+    line-height: 1.4; /* Adjust line height for multi-line headings */
+    /* Remove any top border/padding if applied generally */
+    border-top: none;
+    padding-top: 0;
+}
+
+/* General H2 style for other sections on the page */
+.content-section h2 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 20px; /* Space below heading */
+    color: #001f4d;
+}
 
 /* ================================== */
 /* Mobile Styles (screens <= 768px)   */
@@ -678,5 +727,34 @@ img, iframe {
         margin-left: 0;
         margin-right: 0;
     }
-
+    /* Stack the heading-aside section on mobile */
+    .content-section--heading-aside {
+        flex-direction: column; /* Stack heading and content */
+        gap: 15px; /* Adjust vertical gap */
+    }
+    
+    .content-section--heading-aside .section-heading-wrapper {
+        flex-basis: auto; /* Reset flex basis */
+        width: 100%; /* Full width */
+        padding-right: 0; /* Remove right padding */
+        border-bottom: 1px solid #eee; /* Add separator below heading */
+        padding-bottom: 10px; /* Add padding below heading */
+        margin-bottom: 10px; /* Add margin below heading */
+    }
+    
+    .content-section--heading-aside .section-heading-wrapper h2 {
+        /* Adjust mobile heading size if needed */
+        font-size: 1.3rem;
+    }
+    
+    /* Adjust general section spacing for mobile */
+    .content-section {
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .content-section h2 {
+        font-size: 1.4rem; /* Adjust general H2 size for mobile */
+        margin-bottom: 15px;
+    }
 } /* End @media (max-width: 768px) */
