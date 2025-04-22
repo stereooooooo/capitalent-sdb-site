@@ -396,7 +396,72 @@ img, iframe {
 .article-display li {
   margin-bottom: 0.5em;
 }
+.content-section {
+  display: flex;
+  gap: 30px; /* Adjust gap as needed */
+  margin-bottom: 48px;
+  align-items: flex-start;
+  border-top: 1px solid #eee; /* Add separator */
+  padding-top: 32px;
+}
+/* First section doesn't need top border/padding */
+.container > .content-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
 
+
+.content-section .main-content {
+  flex: 2; /* Give main content more space */
+  min-width: 0; /* Prevent flex overflow */
+}
+
+.content-section .floating-box {
+  flex: 1; /* Allow floating box to take space */
+  background-color: #f9f9fc; /* Style from inline */
+  border-left: 4px solid #c8102e; /* Style from inline */
+  padding: 16px 20px; /* Style from inline */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Style from inline */
+  border-radius: 4px; /* Style from inline */
+  box-sizing: border-box;
+  /* Remove margin if gap provides enough space */
+  /* margin: 24px 0; */
+}
+
+/* Style for sections that should span full width (like Symptoms, Why It Matters) */
+.content-section.full-width {
+    flex-direction: column; /* Ensure content stacks */
+    gap: 15px; /* Adjust gap */
+}
+.content-section.full-width .floating-box {
+    display: none; /* Hide floating box if section is full width */
+}
+.content-section.full-width .main-content {
+    flex-basis: 100%; /* Ensure it takes full width */
+}
+
+
+.content-section h2 {
+  font-size: 1.6rem; /* Adjust heading size */
+  margin-top: 0;
+  margin-bottom: 15px; /* Add space below heading */
+  color: #001f4d;
+  /* Remove border/padding from inline style, handled by .content-section */
+  border-top: none;
+  padding-top: 0;
+}
+
+.floating-box h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #001f4d;
+  margin-bottom: 10px;
+}
+
+.floating-box ul {
+    padding-left: 20px; /* Indent list */
+    margin-bottom: 0; /* Remove default margin */
+}
 
 /* ================================== */
 /* Mobile Styles (screens <= 768px)   */
@@ -581,5 +646,26 @@ img, iframe {
         font-size: 1rem; /* Adjust size */
         line-height: 1.7;
     }
-
+    .content-section {
+        flex-direction: column; /* Stack main content and floating box */
+        gap: 20px; /* Adjust vertical gap */
+        padding-top: 24px; /* Adjust padding */
+        margin-bottom: 30px; /* Adjust margin */
+    }
+    
+    .content-section .main-content,
+    .content-section .floating-box {
+        flex-basis: auto; /* Reset flex basis */
+        width: 100%; /* Ensure they take full width */
+    }
+    
+    .content-section h2 {
+        font-size: 1.4rem; /* Adjust heading size for mobile */
+    }
+    
+    .floating-box {
+        /* Reset side margin if any was added */
+        margin-left: 0;
+        margin-right: 0;
+    }
 } /* End @media (max-width: 768px) */
