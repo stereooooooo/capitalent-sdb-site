@@ -1,176 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Understanding SDB | Capital ENT</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-  <style>
-    .container {
-      max-width: 1140px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-.container section {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 48px;
-  align-items: flex-start;
-}
-    section > div {
-      flex: 1;
-    }
-    .floating-box {
-      background-color: #f9f9fc;
-      border-left: 4px solid #c8102e;
-      padding: 16px 20px;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-    }
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 0;
-      border-top: 1px solid #ddd;
-      padding-top: 32px;
-    }
-    ul {
-      line-height: 1.7;
-      padding-left: 20px;
-    }
-    p {
-      line-height: 1.7;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(10px);
-      animation: fadeIn 0.6s ease forwards;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: none;
-      }
-    }
-  </style>
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding SDB | Capital ENT</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
 <body>
-  <div class="micro-banner">
-    This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
-    <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
-  </div>
-  <div class="top-bar">
-    Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
-  </div>
-  <header>
-    <div class="logo-nav">
-      <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="understanding.html" class="active">Understanding SDB</a>
-        <a href="approach.html">Our Approach</a>
-        <a href="treatment.html">Treatment Options</a>
-        <a href="resources.html">Resources</a>
-        <a href="faqs.html">FAQs</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="micro-banner">
+        This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
+        <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
     </div>
-  </header>
 
-<section class="hero">
-  <h1>Understanding Sleep-Disordered Breathing</h1>
-  <p>Learn about how sleep-disordered breathing affects your health and what symptoms to watch for.</p>
-</section>
+    <div class="top-bar">
+        Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
+    </div>
 
-  <div class="container">
-    <section class="fade-in">
-      <div>
-        <h2>Primary Snoring</h2>
-        <p><strong>Primary Snoring:</strong> Noisy breathing during sleep caused by vibration of tissues in the throat (such as the soft palate or uvula). It <em>does not</em> involve pauses in breathing or drops in oxygen, but it may still disrupt sleep and indicate airflow restriction.</p>
-      </div>
-      <div class="floating-box">
-        <h3>Did You Know?</h3>
-        <ul>
-          <li>Primary snoring can lead to sleep fragmentation even without apnea.</li>
-          <li>It may be a sign of increased airway resistance.</li>
-        </ul>
-      </div>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
+        </a>
+
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+            ☰ <span class="sr-only">Menu</span> </button>
+
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="understanding.html" class="active">Understanding SDB</a> <a href="approach.html">Our Approach</a>
+            <a href="treatment.html">Treatment Options</a>
+            <a href="resources.html">Resources</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Understanding Sleep-Disordered Breathing</h1>
+      <p>Learn about how sleep-disordered breathing affects your health and what symptoms to watch for.</p>
     </section>
 
-    <section class="fade-in">
-      <div>
-        <h2>Upper Airway Resistance Syndrome (UARS)</h2>
-        <p><strong>UARS:</strong> A condition where the airway narrows slightly during sleep, causing increased effort to breathe. Though oxygen levels typically remain stable, this leads to repeated arousals (micro-awakenings), resulting in <em>unrefreshing sleep and daytime fatigue</em>.</p>
-      </div>
-      <div class="floating-box">
-        <h3>Causes</h3>
-        <ul>
-          <li>Narrow jaw or nasal passageways</li>
-          <li>Increased soft tissue in the throat</li>
-        </ul>
-      </div>
-    </section>
+    <main class="container">
+        <section class="content-section fade-in">
+            <div class="main-content"> <h2>Primary Snoring</h2>
+                <p><strong>Primary Snoring:</strong> Noisy breathing during sleep caused by vibration of tissues in the throat (such as the soft palate or uvula). It <em>does not</em> involve pauses in breathing or drops in oxygen, but it may still disrupt sleep and indicate airflow restriction.</p>
+            </div>
+            <aside class="floating-box"> <h3>Did You Know?</h3>
+                <ul>
+                  <li>Primary snoring can lead to sleep fragmentation even without apnea.</li>
+                  <li>It may be a sign of increased airway resistance.</li>
+                </ul>
+            </aside>
+        </section>
 
-    <section class="fade-in">
-      <div>
-        <h2>Obstructive Sleep Apnea (OSA)</h2>
-        <p><strong>OSA:</strong> A more serious condition where the airway becomes partially or completely blocked repeatedly during sleep. These episodes can last 10 seconds or longer, leading to <em>reduced oxygen levels</em>, poor sleep quality, and long-term health risks. OSA severity is measured by the <strong>Apnea-Hypopnea Index (AHI)</strong> on a sleep study.</p>
-      </div>
-      <div class="floating-box">
-        <h3>Interesting Facts</h3>
-        <ul>
-          <li>OSA often worsens during REM sleep when muscle tone is lowest.</li>
-          <li>It's associated with high blood pressure, stroke, and heart disease.</li>
-        </ul>
-      </div>
-    </section>
+        <section class="content-section fade-in">
+            <div class="main-content">
+                <h2>Upper Airway Resistance Syndrome (UARS)</h2>
+                <p><strong>UARS:</strong> A condition where the airway narrows slightly during sleep, causing increased effort to breathe. Though oxygen levels typically remain stable, this leads to repeated arousals (micro-awakenings), resulting in <em>unrefreshing sleep and daytime fatigue</em>.</p>
+            </div>
+            <aside class="floating-box">
+                <h3>Causes</h3>
+                <ul>
+                  <li>Narrow jaw or nasal passageways</li>
+                  <li>Increased soft tissue in the throat</li>
+                </ul>
+            </aside>
+        </section>
 
-    <section class="fade-in">
-      <div>
-        <h2>Common Symptoms</h2>
-        <ul>
-          <li>Loud, chronic snoring</li>
-          <li>Excessive daytime fatigue</li>
-          <li>Morning headaches</li>
-          <li>Dry mouth or sore throat upon waking</li>
-          <li>Waking up gasping or choking</li>
-          <li>Trouble staying asleep or frequent awakenings</li>
-          <li>Brain fog or memory and focus issues</li>
-          <li>Mood changes, such as irritability or depression</li>
-          <li>Decreased libido</li>
-          <li>Difficulty losing weight</li>
-        </ul>
-        <p><em>Note: Many people with SDB don’t realize they’re waking up throughout the night.</em></p>
-      </div>
-    </section>
+        <section class="content-section fade-in">
+            <div class="main-content">
+                <h2>Obstructive Sleep Apnea (OSA)</h2>
+                <p><strong>OSA:</strong> A more serious condition where the airway becomes partially or completely blocked repeatedly during sleep. These episodes can last 10 seconds or longer, leading to <em>reduced oxygen levels</em>, poor sleep quality, and long-term health risks. OSA severity is measured by the <strong>Apnea-Hypopnea Index (AHI)</strong> on a sleep study.</p>
+            </div>
+            <aside class="floating-box">
+                <h3>Interesting Facts</h3>
+                <ul>
+                  <li>OSA often worsens during REM sleep when muscle tone is lowest.</li>
+                  <li>It's associated with high blood pressure, stroke, and heart disease.</li>
+                </ul>
+            </aside>
+        </section>
 
-    <section class="fade-in">
-      <div>
-        <h2>Why It Matters</h2>
-        <p>Left untreated, sleep-disordered breathing can:</p>
-        <ul>
-          <li>Disrupt your body’s natural sleep cycles</li>
-          <li>Lead to serious health issues such as:
-            <ul>
-              <li>High blood pressure</li>
-              <li>Heart attack or heart failure</li>
-              <li>Stroke</li>
-              <li>Type 2 diabetes</li>
-              <li>Atrial fibrillation (irregular heartbeat)</li>
-            </ul>
-          </li>
-          <li>Increase your risk of drowsy driving or workplace accidents</li>
-          <li>Decrease overall quality of life</li>
-        </ul>
-        <p><strong>The good news is</strong> that effective treatments exist. Identifying and treating SDB can lead to better sleep, more energy, improved mood, and long-term health benefits.</p>
-      </div>
-    </section>
-  </div>
+        <section class="content-section full-width fade-in">
+            <div class="main-content">
+                <h2>Common Symptoms</h2>
+                <ul>
+                  <li>Loud, chronic snoring</li>
+                  <li>Excessive daytime fatigue</li>
+                  <li>Morning headaches</li>
+                  <li>Dry mouth or sore throat upon waking</li>
+                  <li>Waking up gasping or choking</li>
+                  <li>Trouble staying asleep or frequent awakenings</li>
+                  <li>Brain fog or memory and focus issues</li>
+                  <li>Mood changes, such as irritability or depression</li>
+                  <li>Decreased libido</li>
+                  <li>Difficulty losing weight</li>
+                </ul>
+                <p><em>Note: Many people with SDB don’t realize they’re waking up throughout the night.</em></p>
+            </div>
+        </section>
 
-  <footer class="site-footer">
-    <p>Capital ENT & Sinus Center © 2025<br>
-      <a href="https://www.capitalent.com">www.capitalent.com</a>
-    </p>
-  </footer>
+        <section class="content-section full-width fade-in">
+            <div class="main-content">
+                <h2>Why It Matters</h2>
+                <p>Left untreated, sleep-disordered breathing can:</p>
+                <ul>
+                  <li>Disrupt your body’s natural sleep cycles</li>
+                  <li>Lead to serious health issues such as:
+                    <ul>
+                      <li>High blood pressure</li>
+                      <li>Heart attack or heart failure</li>
+                      <li>Stroke</li>
+                      <li>Type 2 diabetes</li>
+                      <li>Atrial fibrillation (irregular heartbeat)</li>
+                    </ul>
+                  </li>
+                  <li>Increase your risk of drowsy driving or workplace accidents</li>
+                  <li>Decrease overall quality of life</li>
+                </ul>
+                <p><strong>The good news is</strong> that effective treatments exist. Identifying and treating SDB can lead to better sleep, more energy, improved mood, and long-term health benefits.</p>
+            </div>
+        </section>
+    </main> <footer>
+        <p>Capital ENT & Sinus Center © 2025<br>
+          <a href="https://www.capitalent.com">www.capitalent.com</a>
+        </p>
+    </footer>
+
+    <script>
+        /**
+         * Toggles the visibility of the mobile navigation menu.
+         * Manages the 'show' class and ARIA attributes for accessibility.
+         */
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            const toggleButton = document.querySelector('.menu-toggle');
+             // Check if elements exist before proceeding
+            if (!nav || !toggleButton) return;
+
+            // Toggle the 'show' class; 'isExpanded' will be true if the class was added, false if removed.
+            const isExpanded = nav.classList.toggle('show');
+
+            // Update ARIA attribute to reflect the menu's current state (expanded or collapsed).
+            toggleButton.setAttribute('aria-expanded', isExpanded);
+        }
+
+        /**
+         * Adds a global click listener to close the mobile menu if a click occurs
+         * outside the menu itself or the toggle button.
+         */
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('mainNav');
+             // Check if nav exists before proceeding
+            if (!nav) return;
+
+            const toggleButton = document.querySelector('.menu-toggle');
+             // Check if toggleButton exists before proceeding
+            if (!toggleButton) return;
+
+
+            // Check if the menu is currently shown and if the click target is outside both elements.
+            if (nav.classList.contains('show') && !nav.contains(event.target) && !toggleButton.contains(event.target)) {
+                // Hide the menu by removing the 'show' class.
+                nav.classList.remove('show');
+                // Update the ARIA attribute on the toggle button.
+                toggleButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
 </body>
 </html>
