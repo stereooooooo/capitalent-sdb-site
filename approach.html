@@ -1,115 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Our Approach | Capital ENT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-  <style>
-    body {
-      line-height: 1.7;
-    }
-    section {
-      border-bottom: 1px solid #eee;
-      padding-bottom: 20px;
-      margin-bottom: 40px;
-    }
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .micro-banner {
-  line-height: 1.4
-}
-.top-bar {
-  background: #000;
-  color: #fff;
-  font-size: 14px;
-  padding: 6px 20px;
-  text-align: right;
-  line-height: 1.2; /* Forces it to match other pages */
-}
-  </style>
-</head>
+    <meta charset="UTF-8" />
+    <title>Our Approach | Capital ENT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
 <body>
-  <div class="micro-banner">
-    This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
-    <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
-  </div>
-
-  <div class="top-bar">
-    Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
-  </div>
-<header>
-  <div class="logo-nav">
-    <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="understanding.html">Understanding SDB</a>
-      <a href="approach.html">Our Approach</a>
-      <a href="treatment.html">Treatment Options</a>
-      <a href="resources.html">Resources</a>
-      <a href="faqs.html">FAQs</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-<section class="hero">
-  <h1>Your Personalized Care Pathway</h1>
-  <p>We believe in a thorough, individualized approach to help you achieve restful sleep and better health.</p>
-</section>
-<main class="container fade-in">
-<section>
-  <h2>What Was Covered at Your Initial Visit</h2>
-  <p>During your first appointment, we performed a comprehensive evaluation to better understand your sleep concerns. This included:</p>
-  <ul>
-    <li><strong>Medical history review</strong> – focusing on sleep symptoms, lifestyle factors, and related conditions</li>
-    <li><strong>Physical exam</strong> – with attention to your nose, throat, and airway anatomy</li>
-    <li><strong>Nasal endoscopy</strong> – if needed, to directly visualize internal nasal structures</li>
-    <li><strong>Sinus CT scan</strong> – if sinus disease or nasal blockage was suspected</li>
-  </ul>
-  <p>Based on this evaluation, we’ve recommended a personalized care plan which may include sleep testing, treatment options, and follow-up steps to help improve your sleep and long-term health.</p>
-</section>
-<section>
-  <h2>Sleep Testing: Home vs. Lab-Based</h2>
-  <div class="comparison-row">
-    <div class="comparison-card">
-      <h3>Home Sleep Apnea Test (HSAT)</h3>
-      <ul>
-        <li>Convenient and done in your own bed</li>
-        <li>Recommended for patients with high likelihood of moderate-severe OSA</li>
-        <li>Measures breathing, oxygen levels, respiratory effort</li>
-        <li>Not ideal if insomnia, limb movement issues, or other disorders suspected</li>
-        <li>Usually lower cost</li>
-      </ul>
+    <div class="micro-banner">
+        This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
+        <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
     </div>
 
-    <div class="comparison-card">
-      <h3>In-Lab Sleep Study (Polysomnography / PSG)</h3>
-      <ul>
-        <li>Performed overnight in a sleep center</li>
-        <li>Recommended if HSAT is inconclusive or for patients with complex sleep concerns</li>
-        <li>Measures brainwaves, eye movement, muscle activity, heart rhythm, and more</li>
-        <li>Best for suspected central sleep apnea, parasomnias, or comorbid insomnia</li>
-        <li>More comprehensive, but higher cost and less convenient</li>
-      </ul>
+    <div class="top-bar">
+        Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
     </div>
-  </div>
-</section>
-<section>
-<h2>Choosing a Treatment Plan</h2>
-<p>We take a personalized approach to treatment. Your plan is based on factors including the severity of sleep apnea, anatomy, comorbid conditions, lifestyle, and your treatment preferences. We review all suitable options, from CPAP and oral appliances to surgery, Inspire therapy, and weight loss support. Our goal is to help you find a long-term solution that fits your needs and improves your quality of life.</p>
-</section>
 
-</main>
-<footer>
-  <p>Capital ENT & Sinus Center © 2025<br><a href="https://www.capitalent.com">www.capitalent.com</a></p>
-</footer>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
+        </a>
+
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+            ☰ <span class="sr-only">Menu</span> </button>
+
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="understanding.html">Understanding SDB</a>
+            <a href="approach.html" class="active">Our Approach</a> <a href="treatment.html">Treatment Options</a>
+            <a href="resources.html">Resources</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Your Personalized Care Pathway</h1>
+      <p>We believe in a thorough, individualized approach to help you achieve restful sleep and better health.</p>
+    </section>
+
+    <main class="container fade-in">
+
+        <section class="content-section"> <h2>What Was Covered at Your Initial Visit</h2>
+            <p>During your first appointment, we performed a comprehensive evaluation to better understand your sleep concerns. This included:</p>
+            <ul>
+                <li><strong>Medical history review</strong> – focusing on sleep symptoms, lifestyle factors, and related conditions</li>
+                <li><strong>Physical exam</strong> – with attention to your nose, throat, and airway anatomy</li>
+                <li><strong>Nasal endoscopy</strong> – if needed, to directly visualize internal nasal structures</li>
+                <li><strong>Sinus CT scan</strong> – if sinus disease or nasal blockage was suspected</li>
+            </ul>
+            <p>Based on this evaluation, we’ve recommended a personalized care plan which may include sleep testing, treatment options, and follow-up steps to help improve your sleep and long-term health.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Sleep Testing: Home vs. Lab-Based</h2>
+            <div class="comparison-row">
+                <div class="comparison-card">
+                    <h3>Home Sleep Apnea Test (HSAT)</h3>
+                    <ul>
+                        <li>Convenient and done in your own bed</li>
+                        <li>Recommended for patients with high likelihood of moderate-severe OSA</li>
+                        <li>Measures breathing, oxygen levels, respiratory effort</li>
+                        <li>Not ideal if insomnia, limb movement issues, or other disorders suspected</li>
+                        <li>Usually lower cost</li>
+                    </ul>
+                </div>
+                <div class="comparison-card">
+                    <h3>In-Lab Sleep Study (Polysomnography / PSG)</h3>
+                    <ul>
+                        <li>Performed overnight in a sleep center</li>
+                        <li>Recommended if HSAT is inconclusive or for patients with complex sleep concerns</li>
+                        <li>Measures brainwaves, eye movement, muscle activity, heart rhythm, and more</li>
+                        <li>Best for suspected central sleep apnea, parasomnias, or comorbid insomnia</li>
+                        <li>More comprehensive, but higher cost and less convenient</li>
+                    </ul>
+                </div>
+            </div> </section>
+
+        <section class="content-section"> <h2>Choosing a Treatment Plan</h2>
+            <p>We take a personalized approach to treatment. Your plan is based on factors including the severity of sleep apnea, anatomy, comorbid conditions, lifestyle, and your treatment preferences. We review all suitable options, from CPAP and oral appliances to surgery, Inspire therapy, and weight loss support. Our goal is to help you find a long-term solution that fits your needs and improves your quality of life.</p>
+        </section>
+
+    </main> <footer>
+      <p>Capital ENT & Sinus Center © 2025<br><a href="https://www.capitalent.com">www.capitalent.com</a></p>
+    </footer>
+
+    <script>
+        /**
+         * Toggles the visibility of the mobile navigation menu.
+         * Manages the 'show' class and ARIA attributes for accessibility.
+         */
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            const toggleButton = document.querySelector('.menu-toggle');
+             // Check if elements exist before proceeding
+            if (!nav || !toggleButton) return;
+
+            // Toggle the 'show' class; 'isExpanded' will be true if the class was added, false if removed.
+            const isExpanded = nav.classList.toggle('show');
+
+            // Update ARIA attribute to reflect the menu's current state (expanded or collapsed).
+            toggleButton.setAttribute('aria-expanded', isExpanded);
+        }
+
+        /**
+         * Adds a global click listener to close the mobile menu if a click occurs
+         * outside the menu itself or the toggle button.
+         */
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('mainNav');
+             // Check if nav exists before proceeding
+            if (!nav) return;
+
+            const toggleButton = document.querySelector('.menu-toggle');
+             // Check if toggleButton exists before proceeding
+            if (!toggleButton) return;
+
+
+            // Check if the menu is currently shown and if the click target is outside both elements.
+            if (nav.classList.contains('show') && !nav.contains(event.target) && !toggleButton.contains(event.target)) {
+                // Hide the menu by removing the 'show' class.
+                nav.classList.remove('show');
+                // Update the ARIA attribute on the toggle button.
+                toggleButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
 </body>
 </html>
