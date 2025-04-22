@@ -68,9 +68,13 @@ header {
   height: 64px; /* Desktop logo height */
   display: block; /* Prevents extra space below image */
 }
+/* Added link wrapper style */
+.logo-link {
+    line-height: 0; /* Remove extra space around logo link */
+}
+
 
 /* Desktop Navigation container */
-/* Note: .logo-nav class from original CSS seems unused in provided index.html, styling header directly */
 nav {
   display: flex; /* Show nav items inline on desktop */
   align-items: center;
@@ -109,6 +113,7 @@ nav a.active {
     color: #001f4d;
     padding: 5px;
     line-height: 1; /* Ensure icon aligns well */
+    z-index: 1100; /* Ensure button is above nav */
 }
 
 /* Hero section */
@@ -321,9 +326,6 @@ img, iframe {
   width: 250px;
   flex-shrink: 0;
   box-sizing: border-box;
-  /* Optional desktop border */
-  /* border-right: 1px solid #ccc; */
-  /* padding-right: 20px; */
 }
 .sidebar h3 {
   font-size: 1.2em;
@@ -369,7 +371,6 @@ img, iframe {
   flex: 1;
   min-width: 0;
   box-sizing: border-box;
-  /* padding: 0 20px; /* Added padding from original CSS */
 }
 .article-display h2 {
   font-size: 1.8em;
@@ -405,40 +406,49 @@ img, iframe {
     /* --- General Mobile Adjustments --- */
     header {
         padding: 10px 15px; /* Adjust header padding */
-         /* Ensure header content aligns even if nav wraps temporarily before hiding */
-        flex-wrap: wrap;
+        /* Remove flex-wrap from previous attempt if present */
+        /* flex-wrap: wrap; */
     }
     .logo {
         height: 40px; /* Smaller logo */
     }
     .menu-toggle {
         display: block; /* Show hamburger button */
+        /* Ensure it's ordered correctly if flex items wrap unexpectedly */
+        order: 3;
     }
 
     /* --- Mobile Navigation --- */
     nav {
-        display: none; /* Hide desktop nav links */
-        order: 3; /* Ensure nav appears below logo and toggle button if header wraps */
-        width: 100%; /* Take full width */
-        flex-basis: 100%; /* Ensure it takes full width */
-        margin-top: 10px; /* Add space below header items */
+        display: none; /* Hide desktop nav links by default */
+        /* Remove properties that placed it below header items */
+        /* order: 3; */
+        /* width: 100%; */
+        /* flex-basis: 100%; */
+        /* margin-top: 10px; */
     }
+    /* --- NEW: Top-Right Dropdown Style --- */
     nav.show {
         display: flex; /* Show nav when toggled */
         flex-direction: column; /* Stack links vertically */
         position: absolute; /* Position relative to header */
-        top: 100%; /* Position below header */
-        left: 0;
+        /* Position dropdown below the header */
+        /* Calculate based on header padding + logo height + bottom padding approx */
+        top: 65px; /* Adjust this value based on your actual header height */
+        right: 15px; /* Align to the right edge (considering header padding) */
+        width: 280px; /* Set a specific width for the dropdown */
+        max-width: 80%; /* Ensure it doesn't exceed screen width */
         background: white;
-        border-top: 1px solid #ddd;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border: 1px solid #ddd; /* Add border */
+        border-radius: 6px; /* Add rounded corners */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Add shadow */
         z-index: 1000;
         padding: 10px 0; /* Vertical padding */
         gap: 0; /* Reset gap */
-        margin-top: 0; /* Reset margin when absolutely positioned */
+        margin-top: 0; /* Reset margin */
     }
     nav a { /* Mobile nav links */
-        padding: 12px 20px;
+        padding: 10px 20px; /* Adjust padding */
         border-bottom: 1px solid #eee;
         width: 100%;
         text-align: left;
@@ -448,7 +458,7 @@ img, iframe {
         color: #001f4d;
         font-weight: 500;
         transition: background-color 0.2s ease, border-left-color 0.2s ease;
-        /* Reset desktop styles */
+        /* Reset potentially inherited desktop styles */
         border-bottom-style: solid;
         border-bottom-width: 1px;
     }
@@ -498,7 +508,6 @@ img, iframe {
      }
 
     /* --- Card Grid Mobile --- */
-    /* auto-fit handles this, but ensure container padding is sufficient */
     .card-grid {
         margin-top: 30px; /* Adjust top margin */
     }
@@ -551,7 +560,7 @@ img, iframe {
         padding-bottom: 15px; /* Add padding below sidebar content */
         margin-bottom: 25px; /* Add margin below sidebar */
         flex-shrink: initial; /* Reset shrink property */
-        /* Ensure sidebar is shown, overriding original display:none */
+        /* Ensure sidebar is shown */
         display: block !important;
     }
     .sidebar h3 {
