@@ -461,6 +461,11 @@ img, iframe {
     padding-left: 20px; /* Indent list */
     margin-bottom: 0; /* Remove default margin */
 }
+/* ================================== */
+/* Styles for Approach Page Layout    */
+/* (Add these outside the media query) */
+/* ================================== */
+
 /* Base style for content sections on this page */
 .content-section {
     padding-bottom: 20px;
@@ -727,34 +732,49 @@ img, iframe {
         margin-left: 0;
         margin-right: 0;
     }
-    /* Stack the heading-aside section on mobile */
-    .content-section--heading-aside {
-        flex-direction: column; /* Stack heading and content */
-        gap: 15px; /* Adjust vertical gap */
-    }
-    
-    .content-section--heading-aside .section-heading-wrapper {
-        flex-basis: auto; /* Reset flex basis */
-        width: 100%; /* Full width */
-        padding-right: 0; /* Remove right padding */
-        border-bottom: 1px solid #eee; /* Add separator below heading */
-        padding-bottom: 10px; /* Add padding below heading */
-        margin-bottom: 10px; /* Add margin below heading */
-    }
-    
-    .content-section--heading-aside .section-heading-wrapper h2 {
-        /* Adjust mobile heading size if needed */
-        font-size: 1.3rem;
-    }
-    
-    /* Adjust general section spacing for mobile */
-    .content-section {
-        padding-bottom: 15px;
-        margin-bottom: 30px;
-    }
-    
-    .content-section h2 {
-        font-size: 1.4rem; /* Adjust general H2 size for mobile */
-        margin-bottom: 15px;
-    }
+/* Stack the heading-aside section on mobile */
+.content-section--heading-aside {
+    flex-direction: column; /* Stack heading and content */
+    gap: 15px; /* Adjust vertical gap */
+}
+
+.content-section--heading-aside .section-heading-wrapper {
+    flex-basis: auto; /* Reset flex basis */
+    width: 100%; /* Full width */
+    padding-right: 0; /* Remove right padding */
+    /* --- REMOVED border, padding, and margin from below heading --- */
+    /* border-bottom: 1px solid #eee; */ /* Removed separator */
+    /* padding-bottom: 10px; */ /* Removed padding */
+    /* margin-bottom: 10px; */ /* Removed margin */
+}
+
+.content-section--heading-aside .section-heading-wrapper h2 {
+    /* Adjust mobile heading size if needed */
+    font-size: 1.3rem;
+    margin-bottom: 0; /* Ensure no bottom margin on the heading itself */
+}
+
+/* Adjust general section spacing for mobile */
+.content-section {
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+/* General H2 mobile style (applies to sections other than heading-aside) */
+/* Ensure this rule doesn't override the specific heading-aside h2 style if needed */
+.content-section:not(.content-section--heading-aside) h2 {
+    font-size: 1.4rem; /* Adjust general H2 size for mobile */
+    margin-bottom: 15px;
+}
+/* Or simplify if all H2s should be the same size on mobile */
+/*
+.content-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+.content-section--heading-aside .section-heading-wrapper h2 {
+     font-size: 1.4rem; // Ensure consistency if desired
+     margin-bottom: 0; // Keep no margin below heading in this specific layout
+}
+*/
 } /* End @media (max-width: 768px) */
