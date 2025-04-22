@@ -482,7 +482,8 @@ img, iframe {
     display: flex;
     gap: 30px; /* Adjust gap between heading and content */
     align-items: flex-start; /* Align items to the top */
-    border-bottom: 1px solid #eee; /* Ensure border */
+    /* Removed border-bottom here, apply to general .content-section instead */
+    /* border-bottom: 1px solid #eee; */
 }
 
 .content-section--heading-aside .section-heading-wrapper {
@@ -509,7 +510,8 @@ img, iframe {
 }
 
 /* General H2 style for other sections on the page */
-.content-section h2 {
+/* Applied to H2s NOT inside the heading-aside layout */
+.content-section:not(.content-section--heading-aside) h2 {
     font-size: 1.6rem;
     margin-top: 0;
     margin-bottom: 20px; /* Space below heading */
@@ -732,49 +734,44 @@ img, iframe {
         margin-left: 0;
         margin-right: 0;
     }
-/* Stack the heading-aside section on mobile */
-.content-section--heading-aside {
-    flex-direction: column; /* Stack heading and content */
-    gap: 15px; /* Adjust vertical gap */
-}
-
-.content-section--heading-aside .section-heading-wrapper {
-    flex-basis: auto; /* Reset flex basis */
-    width: 100%; /* Full width */
-    padding-right: 0; /* Remove right padding */
-    /* --- REMOVED border, padding, and margin from below heading --- */
-    /* border-bottom: 1px solid #eee; */ /* Removed separator */
-    /* padding-bottom: 10px; */ /* Removed padding */
-    /* margin-bottom: 10px; */ /* Removed margin */
-}
-
-.content-section--heading-aside .section-heading-wrapper h2 {
-    /* Adjust mobile heading size if needed */
-    font-size: 1.3rem;
-    margin-bottom: 0; /* Ensure no bottom margin on the heading itself */
-}
-
-/* Adjust general section spacing for mobile */
-.content-section {
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-}
-
-/* General H2 mobile style (applies to sections other than heading-aside) */
-/* Ensure this rule doesn't override the specific heading-aside h2 style if needed */
-.content-section:not(.content-section--heading-aside) h2 {
-    font-size: 1.4rem; /* Adjust general H2 size for mobile */
-    margin-bottom: 15px;
-}
-/* Or simplify if all H2s should be the same size on mobile */
-/*
-.content-section h2 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-}
-.content-section--heading-aside .section-heading-wrapper h2 {
-     font-size: 1.4rem; // Ensure consistency if desired
-     margin-bottom: 0; // Keep no margin below heading in this specific layout
-}
+    /* Stack the heading-aside section on mobile */
+    .content-section--heading-aside {
+        flex-direction: column; /* Stack heading and content */
+        gap: 10px; /* REDUCED vertical gap */
+        border-bottom: 1px solid #eee; /* Re-add bottom border for mobile separation */
+    }
+    
+    .content-section--heading-aside .section-heading-wrapper {
+        flex-basis: auto; /* Reset flex basis */
+        width: 100%; /* Full width */
+        padding-right: 0; /* Remove right padding */
+        /* Ensure no border/padding/margin below heading wrapper */
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    
+    .content-section--heading-aside .section-heading-wrapper h2 {
+        /* Adjust mobile heading size if needed */
+        font-size: 1.3rem;
+        margin-bottom: 0; /* Ensure no bottom margin on the heading itself */
+        border-top: none; /* Explicitly remove top border */
+        padding-top: 0; /* Explicitly remove top padding */
+    }
+    
+    /* Adjust general section spacing for mobile */
+    .content-section {
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    
+    /* General H2 mobile style (applies to sections other than heading-aside) */
+    .content-section:not(.content-section--heading-aside) h2 {
+        font-size: 1.4rem; /* Adjust general H2 size for mobile */
+        margin-bottom: 15px;
+        /* Add top border/padding if needed for these sections */
+        /* border-top: 1px solid #ddd; */
+        /* padding-top: 24px; */
+    }
 */
 } /* End @media (max-width: 768px) */
