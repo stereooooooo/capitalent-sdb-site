@@ -517,6 +517,94 @@ img, iframe {
     border-top: none;
     padding-top: 0;
 }
+/* ================================== */
+/* Styles for Resources Page Layout   */
+/* (Add OUTSIDE media query)          */
+/* ================================== */
+.resources-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.sidebar h3 {
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #001f4d;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.sidebar li {
+  margin-bottom: 8px;
+}
+.sidebar li strong {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  font-size: 0.95em;
+}
+.sidebar li:first-child strong {
+  margin-top: 0;
+}
+.sidebar a {
+  color: #001f4d;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+.sidebar a:hover {
+  color: #c8102e;
+  text-decoration: underline;
+}
+.article-display {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.article-display h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #001f4d;
+}
+.article-display h3 {
+  font-size: 1.4em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #1b2a52;
+}
+.article-display p {
+  margin-bottom: 1em;
+  line-height: 1.7;
+}
+.article-display ul,
+.article-display ol {
+  margin-bottom: 1em;
+  padding-left: 25px;
+}
+.article-display li {
+  margin-bottom: 0.5em;
+}
+
+/* Hide mobile selector on desktop */
+.mobile-article-selector {
+    display: none;
+}
 
 /* --- End of Desktop Styles --- */
 
@@ -763,5 +851,66 @@ img, iframe {
     }
     /* --- End Mobile Styles for Specific Page Layouts --- */
 
+      /* --- Resources Page Mobile --- */
+    .resources-container {
+        flex-direction: column; /* Stack */
+        gap: 0; /* Remove gap */
+    }
+    /* Hide desktop sidebar */
+    .sidebar {
+        display: none;
+    }
+    /* Show and style mobile selector */
+    .mobile-article-selector {
+        display: block; /* Show the dropdown container */
+        margin-bottom: 25px; /* Space below dropdown */
+    }
+    .mobile-article-selector label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-size: 1.1em;
+        color: #001f4d;
+    }
+    .mobile-article-selector select {
+        width: 100%; /* Full width */
+        padding: 10px 12px; /* Comfortable padding */
+        font-size: 1rem; /* Readable font size */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        /* Add appearance for default dropdown arrow */
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        /* Add custom arrow indicator */
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 10px auto;
+        cursor: pointer;
+    }
+    /* Remove focus outline for webkit */
+    .mobile-article-selector select:focus {
+        outline: none;
+        border-color: #001f4d; /* Highlight border on focus */
+        box-shadow: 0 0 0 2px rgba(0, 31, 77, 0.2);
+    }
+    
+    
+    /* Ensure article display takes full width */
+    .article-display {
+       width: 100%;
+       padding: 0;
+    }
+    .article-display h2 {
+        font-size: 1.4rem;
+    }
+    .article-display p,
+    .article-display li {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    /* --- End Resources Page Mobile --- */
 
 } /* End @media (max-width: 768px) */
