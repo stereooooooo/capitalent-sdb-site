@@ -226,14 +226,20 @@ footer {
   margin-top: 60px; /* Increased margin */
 }
 
-/* General element styles from original CSS */
+/* General element styles */
 p {
   line-height: 1.7;
-  margin-bottom: 1em; /* Added default bottom margin */
+  margin-top: 0; /* Remove default top margin */
+  margin-bottom: 1em; /* Default bottom margin */
+}
+ul, ol {
+    padding-left: 20px; /* Consistent list indent */
+    margin-top: 0;
+    margin-bottom: 1em;
 }
 li {
   line-height: 1.7;
-  margin-bottom: 0.5em; /* Added default bottom margin */
+  margin-bottom: 0.5em; /* Default bottom margin */
 }
 
 /* Responsive images and embeds */
@@ -253,6 +259,29 @@ img, iframe {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ================================== */
+/* General Content Section Styles     */
+/* ================================== */
+.content-section {
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee; /* Separator line */
+}
+/* Remove border/margin from the very last section within its container */
+.container > .content-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+/* General H2 style within content sections */
+.content-section h2 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #001f4d;
+    border-top: none;
+    padding-top: 0;
 }
 
 /* ================================== */
@@ -396,43 +425,68 @@ img, iframe {
 }
 
 /* ================================== */
-/* Styles for Approach Page Layout    */
+/* Styles for Understanding/Approach Pages Layout */
 /* ================================== */
 
 /* --- DESKTOP Styles (Apply OUTSIDE media query) --- */
 
-/* Base style for content sections on Approach page */
-.content-section {
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #eee; /* Separator line */
-}
-/* Remove border/margin from the very last section within its container */
-.container > .content-section:last-of-type {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-/* Specific style for the section with heading aside layout */
-/* Default to side-by-side (desktop) */
-.content-section--heading-aside {
+/* Style for sections containing a floating box (Understanding Page) */
+.content-section.has-floating-box {
     display: flex;
-    flex-direction: row; /* Explicitly row for desktop */
+    flex-direction: row; /* Default desktop */
     gap: 30px;
     align-items: flex-start;
 }
+.content-section.has-floating-box .main-content {
+    flex: 2; /* Main content takes more space */
+    min-width: 0;
+}
+.content-section.has-floating-box .floating-box {
+    flex: 1; /* Floating box takes less space */
+    background-color: #f9f9fc;
+    border-left: 4px solid #c8102e;
+    padding: 16px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.content-section.has-floating-box h2 {
+    /* Style for H2 when floating box is present */
+    border-top: 1px solid #ddd; /* Restore top border from original design */
+    padding-top: 32px; /* Restore top padding */
+    margin-bottom: 15px;
+}
+/* Remove top border/padding from the H2 in the VERY FIRST section */
+.container > .content-section.has-floating-box:first-of-type h2 {
+    border-top: none;
+    padding-top: 0;
+}
+.floating-box h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #001f4d;
+    margin-bottom: 10px;
+}
+.floating-box ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
 
+/* Style for the section with heading aside (Approach Page) */
+.content-section--heading-aside {
+    display: flex;
+    flex-direction: row; /* Default desktop */
+    gap: 30px;
+    align-items: flex-start;
+}
 .content-section--heading-aside .section-heading-wrapper {
     flex: 0 0 200px; /* Fixed width for heading */
     padding-right: 20px;
 }
-
 .content-section--heading-aside .section-content-wrapper {
     flex: 1; /* Content takes remaining space */
     min-width: 0;
 }
-
-/* Heading style within the aside section */
 .content-section--heading-aside h2 {
     font-size: 1.4rem;
     margin-top: 0;
@@ -443,16 +497,25 @@ img, iframe {
     padding-top: 0;
 }
 
-/* General H2 style for other sections (NOT heading-aside) */
-.content-section:not(.content-section--heading-aside) h2 {
-    font-size: 1.6rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #001f4d;
-    border-top: none; /* No top border needed here either */
+/* Style for full-width sections (used on Understanding Page) */
+.content-section.full-width {
+    /* No flex needed, default block behavior is fine */
+}
+.content-section.full-width .floating-box {
+    display: none; /* Hide floating box */
+}
+.content-section.full-width h2 {
+    border-top: 1px solid #ddd; /* Restore top border */
+    padding-top: 32px; /* Restore top padding */
+    margin-bottom: 15px;
+}
+/* Remove top border/padding if it's the first section */
+.container > .content-section.full-width:first-of-type h2 {
+    border-top: none;
     padding-top: 0;
 }
-/* --- End of Approach Page Desktop Styles --- */
+
+/* --- End of Desktop Styles --- */
 
 
 /* ================================== */
@@ -659,6 +722,45 @@ img, iframe {
         margin-bottom: 15px;
     }
     /* --- End Approach Page Mobile --- */
+
+    /* --- Understanding Page Mobile --- */
+    /* Stack sections with floating boxes */
+    .content-section.has-floating-box {
+        flex-direction: column; /* Stack main content and floating box */
+        gap: 20px; /* Adjust vertical gap */
+    }
+    .content-section.has-floating-box .main-content,
+    .content-section.has-floating-box .floating-box {
+        flex-basis: auto; /* Reset flex basis */
+        width: 100%; /* Ensure they take full width */
+    }
+    /* Adjust H2 style */
+    .content-section.has-floating-box h2 {
+        font-size: 1.4rem; /* Adjust heading size for mobile */
+        border-top: 1px solid #ddd; /* Ensure border exists on mobile */
+        padding-top: 24px; /* Adjust padding for mobile */
+    }
+    /* Still remove border/padding for the first H2 on mobile */
+    .container > .content-section.has-floating-box:first-of-type h2 {
+        border-top: none;
+        padding-top: 0;
+    }
+    .floating-box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /* Adjust full-width section H2 */
+     .content-section.full-width h2 {
+        font-size: 1.4rem;
+        border-top: 1px solid #ddd;
+        padding-top: 24px;
+        margin-bottom: 15px;
+    }
+    .container > .content-section.full-width:first-of-type h2 {
+        border-top: none;
+        padding-top: 0;
+    }
+    /* --- End Understanding Page Mobile --- */
 
 
 } /* End @media (max-width: 768px) */
