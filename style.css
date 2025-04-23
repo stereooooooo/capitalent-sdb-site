@@ -280,8 +280,8 @@ img, iframe {
     margin-top: 0;
     margin-bottom: 20px;
     color: #001f4d;
-    border-top: none;
-    padding-top: 0;
+    border-top: none; /* Default: no top border on H2 */
+    padding-top: 0; /* Default: no top padding on H2 */
 }
 
 /* ================================== */
@@ -433,16 +433,16 @@ img, iframe {
 /* Style for sections containing a floating box (Understanding Page) */
 .content-section.has-floating-box {
     display: flex;
-    flex-direction: row; /* Default desktop */
+    flex-direction: row; /* Desktop: Side-by-side */
     gap: 30px;
     align-items: flex-start;
 }
 .content-section.has-floating-box .main-content {
-    flex: 2; /* Main content takes more space */
+    flex: 2;
     min-width: 0;
 }
 .content-section.has-floating-box .floating-box {
-    flex: 1; /* Floating box takes less space */
+    flex: 1;
     background-color: #f9f9fc;
     border-left: 4px solid #c8102e;
     padding: 16px 20px;
@@ -450,10 +450,10 @@ img, iframe {
     border-radius: 4px;
     box-sizing: border-box;
 }
+/* Desktop H2 style when floating box is present */
 .content-section.has-floating-box h2 {
-    /* Style for H2 when floating box is present */
-    border-top: 1px solid #ddd; /* Restore top border from original design */
-    padding-top: 32px; /* Restore top padding */
+    border-top: 1px solid #ddd;
+    padding-top: 32px;
     margin-bottom: 15px;
 }
 /* Remove top border/padding from the H2 in the VERY FIRST section */
@@ -475,38 +475,40 @@ img, iframe {
 /* Style for the section with heading aside (Approach Page) */
 .content-section--heading-aside {
     display: flex;
-    flex-direction: row; /* Default desktop */
+    flex-direction: row; /* Desktop: Side-by-side */
     gap: 30px;
     align-items: flex-start;
 }
 .content-section--heading-aside .section-heading-wrapper {
-    flex: 0 0 200px; /* Fixed width for heading */
+    flex: 0 0 200px;
     padding-right: 20px;
 }
 .content-section--heading-aside .section-content-wrapper {
-    flex: 1; /* Content takes remaining space */
+    flex: 1;
     min-width: 0;
 }
+/* Desktop H2 style within the aside section */
 .content-section--heading-aside h2 {
     font-size: 1.4rem;
     margin-top: 0;
     margin-bottom: 0;
     color: #001f4d;
     line-height: 1.4;
-    border-top: none; /* No top border needed here */
+    border-top: none;
     padding-top: 0;
 }
 
-/* Style for full-width sections (used on Understanding Page) */
+/* Style for full-width sections (Understanding Page) */
 .content-section.full-width {
-    /* No flex needed, default block behavior is fine */
+    /* Defaults to block display, no flex needed */
 }
 .content-section.full-width .floating-box {
-    display: none; /* Hide floating box */
+    display: none;
 }
+/* Desktop H2 style for full-width sections */
 .content-section.full-width h2 {
-    border-top: 1px solid #ddd; /* Restore top border */
-    padding-top: 32px; /* Restore top padding */
+    border-top: 1px solid #ddd;
+    padding-top: 32px;
     margin-bottom: 15px;
 }
 /* Remove top border/padding if it's the first section */
@@ -697,10 +699,9 @@ img, iframe {
     }
     /* Stack the specific heading-aside section */
     .content-section--heading-aside {
-        flex-direction: column; /* This rule stacks the section */
-        gap: 10px; /* Adjust vertical gap */
+        flex-direction: column; /* Stack */
+        gap: 10px;
     }
-    /* Reset heading wrapper for stacking */
     .content-section--heading-aside .section-heading-wrapper {
         flex-basis: auto;
         width: 100%;
@@ -709,14 +710,13 @@ img, iframe {
         padding-bottom: 0;
         margin-bottom: 0;
     }
-     /* Adjust heading style within stacked section */
     .content-section--heading-aside .section-heading-wrapper h2 {
         font-size: 1.3rem;
         margin-bottom: 0;
         border-top: none;
         padding-top: 0;
     }
-    /* General H2 mobile style (applies to sections other than heading-aside) */
+    /* General H2 mobile style */
     .content-section:not(.content-section--heading-aside) h2 {
         font-size: 1.4rem;
         margin-bottom: 15px;
@@ -726,21 +726,21 @@ img, iframe {
     /* --- Understanding Page Mobile --- */
     /* Stack sections with floating boxes */
     .content-section.has-floating-box {
-        flex-direction: column; /* Stack main content and floating box */
-        gap: 20px; /* Adjust vertical gap */
+        flex-direction: column; /* Stack */
+        gap: 20px;
     }
     .content-section.has-floating-box .main-content,
     .content-section.has-floating-box .floating-box {
-        flex-basis: auto; /* Reset flex basis */
-        width: 100%; /* Ensure they take full width */
+        flex-basis: auto;
+        width: 100%;
     }
     /* Adjust H2 style */
     .content-section.has-floating-box h2 {
-        font-size: 1.4rem; /* Adjust heading size for mobile */
-        border-top: 1px solid #ddd; /* Ensure border exists on mobile */
-        padding-top: 24px; /* Adjust padding for mobile */
+        font-size: 1.4rem;
+        border-top: 1px solid #ddd;
+        padding-top: 24px;
     }
-    /* Still remove border/padding for the first H2 on mobile */
+    /* Remove border/padding for the first H2 */
     .container > .content-section.has-floating-box:first-of-type h2 {
         border-top: none;
         padding-top: 0;
