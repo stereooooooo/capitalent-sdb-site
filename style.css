@@ -599,7 +599,55 @@ img, iframe {
 }
 */
 
+/* ================================== */
+/* Styles for Contact Page Layout     */
+/* (Add OUTSIDE media query)          */
+/* ================================== */
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+  gap: 30px; /* Adjust gap as needed */
+  margin-top: 40px;
+}
+
+/* Style for the location cards using floating-box */
+.floating-box.location-card {
+  /* Inherits base floating-box styles (background, border-left, padding, shadow) */
+  /* Add specific styles if needed */
+   margin: 0; /* Remove default margin from floating-box if needed */
+   line-height: 1.6; /* Ensure consistent line height */
+}
+
+.floating-box.location-card h3 {
+    margin-bottom: 10px; /* Space below location title */
+}
+
+.floating-box.location-card p {
+    margin-bottom: 0.8em; /* Adjust paragraph spacing */
+}
+.floating-box.location-card p:last-child {
+    margin-bottom: 0;
+}
+
+.floating-box.location-card iframe {
+  display: block; /* Remove extra space below iframe */
+  width: 100%;
+  height: 250px; /* Fixed height for maps */
+  border: 1px solid #ddd; /* Add a light border */
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+/* Make phone numbers clearly links */
+.floating-box.location-card a[href^="tel:"] {
+    color: #001f4d; /* Match heading color */
+    text-decoration: underline;
+    font-weight: normal; /* Override potential bold from parent p>strong */
+}
+.floating-box.location-card a[href^="tel:"]:hover {
+    color: #c8102e; /* Hover color */
+}
 
 /* --- End of Desktop Styles --- */
 
@@ -863,5 +911,18 @@ img, iframe {
     }
     /* --- End Mobile Styles for Specific Page Layouts --- */
 
+      /* ================================== */
+    /* Mobile Styles for Contact Page     */
+    /* (Add INSIDE @media query)          */
+    /* ================================== */
+    
+    .contact-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        gap: 25px; /* Adjust mobile gap */
+    }
+    
+    .floating-box.location-card iframe {
+        height: 200px; /* Slightly smaller map height on mobile */
+    }
 
 } /* End @media (max-width: 768px) */
