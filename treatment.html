@@ -1,124 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Treatment Options | Capital ENT</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treatment Options | Capital ENT</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div class="micro-banner">
-  This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
-  <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
-</div>
-
-<div class="top-bar">
-  Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
-</div>
-
-<header>
-  <div class="logo-nav">
-    <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="understanding.html">Understanding SDB</a>
-      <a href="approach.html">Our Approach</a>
-      <a href="treatment.html" class="active">Treatment Options</a>
-      <a href="resources.html">Resources</a>
-      <a href="faqs.html">FAQs</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <h1>Treatment Options</h1>
-  <p>We offer a range of solutions depending on your unique symptoms, anatomy, and preferences.</p>
-</section>
-
-<main class="container fade-in">
-  <section>
-    <h2>CPAP Therapy</h2>
-    <div class="treatment-block">
-      <img src="cpap-illustration.png" alt="CPAP therapy illustration" />
-      <div>
-        <p>Pressurized airflow therapy delivered through a mask to keep your airway open during sleep. This is the first-line treatment for moderate to severe OSA. When tolerated, CPAP is highly effective in restoring restful sleep, improving oxygen levels, and reducing cardiovascular risk.</p>
-        <div class="treatment-box">
-          <strong>Best for:</strong> Patients with moderate to severe OSA without major anatomical obstruction.<br>
-          <strong>Pros:</strong> Most effective treatment option; immediate results; non-invasive.<br>
-          <strong>Cons:</strong> Can be uncomfortable; requires nightly use; machine maintenance and travel considerations.
-        </div>
-      </div>
+    <div class="micro-banner">
+      This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
+      <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
     </div>
-  </section>
 
-  <section>
-    <h2>Oral Appliances</h2>
-    <div class="treatment-block">
-      <img src="oral.png" alt="Oral appliance" />
-      <div>
-        <p>These custom-fit dental devices gently reposition your lower jaw or tongue to prevent the airway from collapsing during sleep. Oral appliances are ideal for patients with mild to moderate OSA or those who find CPAP uncomfortable or difficult to tolerate.</p>
-        <div class="treatment-box">
-          <strong>Best for:</strong> Mild to moderate OSA; CPAP-intolerant patients.<br>
-          <strong>Pros:</strong> Portable, silent, easy to use, no power required.<br>
-          <strong>Cons:</strong> Less effective for severe OSA; may cause jaw discomfort or bite changes.
-        </div>
-      </div>
+    <div class="top-bar">
+      Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
     </div>
-  </section>
 
-  <section>
-    <h2>Inspire Therapy</h2>
-    <div class="treatment-block">
-      <img src="inspire.png" alt="Inspire" />
-      <div>
-        <p>Inspire is an implantable device that stimulates key airway muscles while you sleep, preventing airway collapse. It’s best suited for patients with moderate to severe OSA who cannot tolerate CPAP and meet specific anatomical and diagnostic criteria.</p>
-        <div class="treatment-box">
-          <strong>Best for:</strong> Patients who are CPAP-intolerant and meet Inspire eligibility criteria.<br>
-          <strong>Pros:</strong> No external mask; improved sleep quality and compliance.<br>
-          <strong>Cons:</strong> Surgical procedure required; device maintenance; not covered by all insurance plans.
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
+        </a>
+
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+            ☰ <span class="sr-only">Menu</span> </button>
+
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="understanding.html">Understanding SDB</a>
+            <a href="approach.html">Our Approach</a>
+            <a href="treatment.html" class="active">Treatment Options</a> <a href="resources.html">Resources</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Treatment Options</h1>
+      <p>We offer a range of solutions depending on your unique symptoms, anatomy, and preferences.</p>
+    </section>
+
+    <main class="container fade-in">
+      <section class="content-section"> <h2>CPAP Therapy</h2>
+        <div class="treatment-block">
+          <img src="https://placehold.co/220x150/1b2a52/ffffff?text=CPAP+Illust" alt="CPAP therapy illustration" />
+          <div class="content"> <p>Pressurized airflow therapy delivered through a mask to keep your airway open during sleep. This is the first-line treatment for moderate to severe OSA. When tolerated, CPAP is highly effective in restoring restful sleep, improving oxygen levels, and reducing cardiovascular risk.</p>
+            <div class="treatment-box">
+              <strong>Best for:</strong> Patients with moderate to severe OSA without major anatomical obstruction.<br>
+              <strong>Pros:</strong> Most effective treatment option; immediate results; non-invasive.<br>
+              <strong>Cons:</strong> Can be uncomfortable; requires nightly use; machine maintenance and travel considerations.
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section>
-    <h2>Nasal & Sinus Surgery</h2>
-    <div class="treatment-block">
-      <img src="nasal.png" alt="Nasal surgery" />
-      <div>
-        <p>Procedures like septoplasty, turbinate reduction, or balloon sinuplasty improve airflow and support other treatments like CPAP or oral appliances by addressing nasal obstruction.</p>
-        <div class="treatment-box">
-          <strong>Best for:</strong> Patients with anatomical nasal blockage contributing to SDB.<br>
-          <strong>Pros:</strong> May improve effectiveness of other treatments; outpatient procedure.<br>
-          <strong>Cons:</strong> Surgical risks; recovery time; benefit depends on individual anatomy.
+      <section class="content-section">
+        <h2>Oral Appliances</h2>
+        <div class="treatment-block">
+          <img src="https://placehold.co/220x150/1b2a52/ffffff?text=Oral+Appliance" alt="Oral appliance" />
+          <div class="content">
+            <p>These custom-fit dental devices gently reposition your lower jaw or tongue to prevent the airway from collapsing during sleep. Oral appliances are ideal for patients with mild to moderate OSA or those who find CPAP uncomfortable or difficult to tolerate.</p>
+            <div class="treatment-box">
+              <strong>Best for:</strong> Mild to moderate OSA; CPAP-intolerant patients.<br>
+              <strong>Pros:</strong> Portable, silent, easy to use, no power required.<br>
+              <strong>Cons:</strong> Less effective for severe OSA; may cause jaw discomfort or bite changes.
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section>
-    <h2>Weight Management</h2>
-    <div class="treatment-block">
-      <img src="weight.png" alt="Weight loss" />
-      <div>
-        <p>We offer medical weight loss support with in-house nutrition counseling and medications like GLP-1 agonists (e.g., Zepbound) to help reduce the severity of sleep apnea. Weight loss can be a highly effective long-term strategy for improving sleep-disordered breathing.</p>
-        <div class="treatment-box">
-          <strong>Best for:</strong> Overweight or obese patients with SDB.<br>
-          <strong>Pros:</strong> Treats the root cause; improves overall health; can reduce or eliminate need for devices.<br>
-          <strong>Cons:</strong> Requires lifestyle changes; medication cost and side effects; gradual improvement.
+      <section class="content-section">
+        <h2>Inspire Therapy</h2>
+        <div class="treatment-block">
+          <img src="https://placehold.co/220x150/1b2a52/ffffff?text=Inspire+Device" alt="Inspire" />
+          <div class="content">
+            <p>Inspire is an implantable device that stimulates key airway muscles while you sleep, preventing airway collapse. It’s best suited for patients with moderate to severe OSA who cannot tolerate CPAP and meet specific anatomical and diagnostic criteria.</p>
+            <div class="treatment-box">
+              <strong>Best for:</strong> Patients who are CPAP-intolerant and meet Inspire eligibility criteria.<br>
+              <strong>Pros:</strong> No external mask; improved sleep quality and compliance.<br>
+              <strong>Cons:</strong> Surgical procedure required; device maintenance; not covered by all insurance plans.
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-</main>
+      </section>
 
-<footer>
-  <p>Capital ENT & Sinus Center © 2025<br>
-    <a href="https://www.capitalent.com">www.capitalent.com</a>
-  </p>
-</footer>
+      <section class="content-section">
+        <h2>Nasal & Sinus Surgery</h2>
+        <div class="treatment-block">
+          <img src="https://placehold.co/220x150/1b2a52/ffffff?text=Nasal+Surgery" alt="Nasal surgery" />
+          <div class="content">
+            <p>Procedures like septoplasty, turbinate reduction, or balloon sinuplasty improve airflow and support other treatments like CPAP or oral appliances by addressing nasal obstruction.</p>
+            <div class="treatment-box">
+              <strong>Best for:</strong> Patients with anatomical nasal blockage contributing to SDB.<br>
+              <strong>Pros:</strong> May improve effectiveness of other treatments; outpatient procedure.<br>
+              <strong>Cons:</strong> Surgical risks; recovery time; benefit depends on individual anatomy.
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="content-section">
+        <h2>Weight Management</h2>
+        <div class="treatment-block">
+          <img src="https://placehold.co/220x150/1b2a52/ffffff?text=Weight+Loss" alt="Weight loss" />
+          <div class="content">
+            <p>We offer medical weight loss support with in-house nutrition counseling and medications like GLP-1 agonists (e.g., Zepbound) to help reduce the severity of sleep apnea. Weight loss can be a highly effective long-term strategy for improving sleep-disordered breathing.</p>
+            <div class="treatment-box">
+              <strong>Best for:</strong> Overweight or obese patients with SDB.<br>
+              <strong>Pros:</strong> Treats the root cause; improves overall health; can reduce or eliminate need for devices.<br>
+              <strong>Cons:</strong> Requires lifestyle changes; medication cost and side effects; gradual improvement.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main> <footer>
+      <p>Capital ENT & Sinus Center © 2025<br>
+        <a href="https://www.capitalent.com">www.capitalent.com</a>
+      </p>
+    </footer>
+
+    <script>
+        /**
+         * Toggles the visibility of the mobile navigation menu.
+         * Manages the 'show' class and ARIA attributes for accessibility.
+         */
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            const toggleButton = document.querySelector('.menu-toggle');
+             // Check if elements exist before proceeding
+            if (!nav || !toggleButton) return;
+
+            // Toggle the 'show' class; 'isExpanded' will be true if the class was added, false if removed.
+            const isExpanded = nav.classList.toggle('show');
+
+            // Update ARIA attribute to reflect the menu's current state (expanded or collapsed).
+            toggleButton.setAttribute('aria-expanded', isExpanded);
+        }
+
+        /**
+         * Adds a global click listener to close the mobile menu if a click occurs
+         * outside the menu itself or the toggle button.
+         */
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('mainNav');
+             // Check if nav exists before proceeding
+            if (!nav) return;
+
+            const toggleButton = document.querySelector('.menu-toggle');
+             // Check if toggleButton exists before proceeding
+            if (!toggleButton) return;
+
+
+            // Check if the menu is currently shown and if the click target is outside both elements.
+            if (nav.classList.contains('show') && !nav.contains(event.target) && !toggleButton.contains(event.target)) {
+                // Hide the menu by removing the 'show' class.
+                nav.classList.remove('show');
+                // Update the ARIA attribute on the toggle button.
+                toggleButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
 </body>
 </html>
