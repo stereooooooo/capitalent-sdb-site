@@ -265,6 +265,7 @@ img, iframe {
 /* General Content Section Styles     */
 /* ================================== */
 .content-section {
+    display: block; /* Default display */
     padding-bottom: 20px;
     margin-bottom: 40px;
     border-bottom: 1px solid #eee; /* Separator line */
@@ -691,13 +692,19 @@ img, iframe {
         line-height: 1.7;
     }
 
-    /* --- Approach Page Mobile --- */
-    /* General section spacing */
-     .content-section {
+    /* --- Mobile Styles for Specific Page Layouts --- */
+
+    /* General section adjustments */
+    .content-section {
         padding-bottom: 15px;
         margin-bottom: 30px;
     }
-    /* Stack the specific heading-aside section */
+    .content-section h2 { /* General mobile H2 size */
+         font-size: 1.4rem;
+         margin-bottom: 15px;
+    }
+
+    /* Approach Page: Stack heading-aside section */
     .content-section--heading-aside {
         flex-direction: column; /* Stack */
         gap: 10px;
@@ -711,20 +718,13 @@ img, iframe {
         margin-bottom: 0;
     }
     .content-section--heading-aside .section-heading-wrapper h2 {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Specific size for this heading */
         margin-bottom: 0;
         border-top: none;
         padding-top: 0;
     }
-    /* General H2 mobile style */
-    .content-section:not(.content-section--heading-aside) h2 {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-    }
-    /* --- End Approach Page Mobile --- */
 
-    /* --- Understanding Page Mobile --- */
-    /* Stack sections with floating boxes */
+    /* Understanding Page: Stack sections with floating boxes */
     .content-section.has-floating-box {
         flex-direction: column; /* Stack */
         gap: 20px;
@@ -734,7 +734,7 @@ img, iframe {
         flex-basis: auto;
         width: 100%;
     }
-    /* Adjust H2 style */
+    /* Mobile H2 style when floating box is present */
     .content-section.has-floating-box h2 {
         font-size: 1.4rem;
         border-top: 1px solid #ddd;
@@ -749,7 +749,8 @@ img, iframe {
         margin-left: 0;
         margin-right: 0;
     }
-    /* Adjust full-width section H2 */
+
+    /* Understanding Page: Adjust full-width section H2 */
      .content-section.full-width h2 {
         font-size: 1.4rem;
         border-top: 1px solid #ddd;
@@ -760,7 +761,7 @@ img, iframe {
         border-top: none;
         padding-top: 0;
     }
-    /* --- End Understanding Page Mobile --- */
+    /* --- End Mobile Styles for Specific Page Layouts --- */
 
 
 } /* End @media (max-width: 768px) */
