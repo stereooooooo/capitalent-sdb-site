@@ -42,7 +42,7 @@
 
     <main class="container fade-in">
       <section class="content-section"> <h2>CPAP Therapy</h2>
-        <div class="treatment-block">
+        <div class="treatment-block scroll-fade">
           <img src="cpap-illustration.png" alt="CPAP therapy illustration" />
           <div class="content"> <p>Pressurized airflow therapy delivered through a mask to keep your airway open during sleep. This is the first-line treatment for moderate to severe OSA. When tolerated, CPAP is highly effective in restoring restful sleep, improving oxygen levels, and reducing cardiovascular risk.</p>
             <div class="treatment-box">
@@ -56,7 +56,7 @@
 
       <section class="content-section">
         <h2>Oral Appliances</h2>
-        <div class="treatment-block">
+        <div class="treatment-block scroll-fade">
           <img src="oral.png" alt="Oral appliance" />
           <div class="content">
             <p>These custom-fit dental devices gently reposition your lower jaw or tongue to prevent the airway from collapsing during sleep. Oral appliances are ideal for patients with mild to moderate OSA or those who find CPAP uncomfortable or difficult to tolerate.</p>
@@ -71,7 +71,7 @@
 
       <section class="content-section">
         <h2>Inspire Therapy</h2>
-        <div class="treatment-block">
+        <div class="treatment-block scroll-fade">
           <img src="inspire.png" alt="Inspire" />
           <div class="content">
             <p>Inspire is an implantable device that stimulates key airway muscles while you sleep, preventing airway collapse. It’s best suited for patients with moderate to severe OSA who cannot tolerate CPAP and meet specific anatomical and diagnostic criteria.</p>
@@ -86,7 +86,7 @@
 
       <section class="content-section">
         <h2>Nasal & Sinus Surgery</h2>
-        <div class="treatment-block">
+        <div class="treatment-block scroll-fade">
           <img src="nasal.png" alt="Nasal surgery" />
           <div class="content">
             <p>Procedures like septoplasty, turbinate reduction, or balloon sinuplasty improve airflow and support other treatments like CPAP or oral appliances by addressing nasal obstruction.</p>
@@ -101,7 +101,7 @@
 
       <section class="content-section">
         <h2>Weight Management</h2>
-        <div class="treatment-block">
+        <div class="treatment-block scroll-fade">
           <img src="weight.png" alt="Weight loss" />
           <div class="content">
             <p>We offer medical weight loss support with in-house nutrition counseling and medications like GLP-1 agonists (e.g., Zepbound) to help reduce the severity of sleep apnea. Weight loss can be a highly effective long-term strategy for improving sleep-disordered breathing.</p>
@@ -160,5 +160,25 @@
             }
         });
     </script>
+    <script>
+  const faders = document.querySelectorAll('.scroll-fade');
+
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 </body>
 </html>
