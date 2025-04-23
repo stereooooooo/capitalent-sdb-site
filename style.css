@@ -269,7 +269,6 @@ img, iframe {
     margin-bottom: 40px;
     border-bottom: 1px solid #eee; /* Separator line */
 }
-/* Remove border/margin from the very last section within its container */
 .container > .content-section:last-of-type {
     border-bottom: none;
     margin-bottom: 0;
@@ -452,8 +451,8 @@ img, iframe {
 }
 /* Desktop H2 style when floating box is present */
 .content-section.has-floating-box h2 {
-    border-top: 1px solid #ddd;
-    padding-top: 32px;
+    border-top: 1px solid #ddd; /* Restore top border from original design */
+    padding-top: 32px; /* Restore top padding */
     margin-bottom: 15px;
 }
 /* Remove top border/padding from the H2 in the VERY FIRST section */
@@ -494,21 +493,22 @@ img, iframe {
     margin-bottom: 0;
     color: #001f4d;
     line-height: 1.4;
-    border-top: none;
+    border-top: none; /* No top border needed here */
     padding-top: 0;
 }
 
 /* Style for full-width sections (Understanding Page) */
 .content-section.full-width {
-    /* Defaults to block display, no flex needed */
+    display: block; /* Explicitly block */
+    flex-direction: initial; /* Reset flex-direction if inherited */
 }
 .content-section.full-width .floating-box {
     display: none;
 }
 /* Desktop H2 style for full-width sections */
 .content-section.full-width h2 {
-    border-top: 1px solid #ddd;
-    padding-top: 32px;
+    border-top: 1px solid #ddd; /* Restore top border */
+    padding-top: 32px; /* Restore top padding */
     margin-bottom: 15px;
 }
 /* Remove top border/padding if it's the first section */
