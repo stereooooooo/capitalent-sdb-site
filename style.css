@@ -414,8 +414,9 @@ img, iframe {
 }
 
 /* Specific style for the section with heading aside layout */
+/* Default to side-by-side (desktop) */
 .content-section--heading-aside {
-    display: flex; /* Side-by-side layout */
+    display: flex;
     flex-direction: row; /* Explicitly row for desktop */
     gap: 30px;
     align-items: flex-start;
@@ -633,19 +634,21 @@ img, iframe {
     }
     /* Stack the specific heading-aside section */
     .content-section--heading-aside {
-        flex-direction: column; /* Stack heading and content */
+        flex-direction: column; /* This rule stacks the section */
         gap: 10px; /* Adjust vertical gap */
     }
+    /* Reset heading wrapper for stacking */
     .content-section--heading-aside .section-heading-wrapper {
-        flex-basis: auto; /* Reset flex basis */
-        width: 100%; /* Full width */
-        padding-right: 0; /* Remove right padding */
-        border-bottom: none; /* No border needed below heading */
+        flex-basis: auto;
+        width: 100%;
+        padding-right: 0;
+        border-bottom: none;
         padding-bottom: 0;
         margin-bottom: 0;
     }
+     /* Adjust heading style within stacked section */
     .content-section--heading-aside .section-heading-wrapper h2 {
-        font-size: 1.3rem; /* Adjust mobile heading size if needed */
+        font-size: 1.3rem;
         margin-bottom: 0;
         border-top: none;
         padding-top: 0;
