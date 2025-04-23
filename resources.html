@@ -42,6 +42,7 @@
 
     <main class="container">
         <div class="resources-container">
+
             <aside class="sidebar">
                 <h3>Sleep Topics</h3>
                 <ul>
@@ -67,9 +68,36 @@
                 </ul>
             </aside>
 
+            <div class="mobile-article-selector">
+                <label for="article-select">Select a Topic:</label>
+                <select id="article-select" onchange="loadArticle(this.value)">
+                    <option value="">-- Select an Article --</option>
+                    <optgroup label="Diagnosis & Basics">
+                        <option value="melatonin">Can Melatonin Help You Sleep?</option>
+                        <option value="central-vs-obstructive">Central vs. Obstructive Sleep Apnea</option>
+                        <option value="do-you-need-study">Do You Really Need a Sleep Study?</option>
+                    </optgroup>
+                    <optgroup label="Management & Therapy">
+                        <option value="cpap">Making CPAP Work for You</option>
+                        <option value="positional-therapy">Positional Therapy for Sleep Apnea</option>
+                        <option value="sleep-hygiene">Sleep Hygiene</option>
+                    </optgroup>
+                    <optgroup label="Related Conditions">
+                        <option value="allergies">How Allergies Affect Your Sleep</option>
+                        <option value="weight-loss">Weight Loss and Sleep Apnea</option>
+                        <option value="insomnia-overlap">Sleep Apnea and Insomnia Overlap</option>
+                        <option value="restless-legs">What is Restless Leg Syndrome?</option>
+                        <option value="mouth-breathing">How Mouth Breathing Affects Sleep</option>
+                        <option value="nasal-congestion">Nasal Congestion at Night</option>
+                        <option value="rem-sleep">What Happens During REM Sleep?</option>
+                        <option value="snoring-warning">When Snoring Is a Sign of Something More</option>
+                    </optgroup>
+                </select>
+            </div>
+
             <section class="article-display fade-in" id="articleDisplay">
                 <h2>Welcome to Our Sleep Resource Library</h2>
-                <p>Select an article from the sidebar to learn more about how to sleep better, breathe easier, and explore your treatment options at Capital ENT & Sinus Center.</p>
+                <p>Select an article from the sidebar or the dropdown above to learn more about how to sleep better, breathe easier, and explore your treatment options at Capital ENT & Sinus Center.</p>
             </section>
         </div> </main> <footer>
         <p>Capital ENT & Sinus Center © 2025<br>
@@ -80,70 +108,61 @@
     <script>
         /**
          * Fetches HTML content from a specified path and displays it in the article display area.
+         * Handles empty selection from dropdown.
          * @param {string} slug - The unique identifier for the article (used to build the file path).
          */
         async function loadArticle(slug) {
             const articleDisplay = document.getElementById("articleDisplay");
+            // If no slug (e.g., default dropdown option selected), do nothing or show default message.
+            if (!slug) {
+                 articleDisplay.innerHTML = `
+                    <h2>Welcome to Our Sleep Resource Library</h2>
+                    <p>Select an article from the sidebar or the dropdown above to learn more about how to sleep better, breathe easier, and explore your treatment options at Capital ENT & Sinus Center.</p>`;
+                 // Optionally update the select menu if needed, though usually not necessary here.
+                 // document.getElementById('article-select').value = "";
+                 return;
+            }
+
             // Provide immediate feedback that content is loading.
             articleDisplay.innerHTML = '<p>Loading article...</p>';
             try {
                 // Construct the path to the article HTML file.
-                // Assumes articles are located in a 'resources' subfolder relative to this HTML file.
                 const response = await fetch(`resources/${slug}.html`);
 
-                // Check if the network response was successful.
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
-                // Get the HTML content as text.
                 const html = await response.text();
-                // Update the article display area with the fetched content.
                 articleDisplay.innerHTML = html;
 
             } catch (error) {
-                // Log the error for debugging purposes.
                 console.error("Error loading article:", error);
-                // Display a user-friendly error message.
                 articleDisplay.innerHTML = '<p>Sorry, this article could not be loaded at this time. Please try again later.</p>';
             }
         }
 
         /**
          * Toggles the visibility of the mobile navigation menu.
-         * Manages the 'show' class and ARIA attributes for accessibility.
          */
         function toggleMenu() {
             const nav = document.getElementById('mainNav');
             const toggleButton = document.querySelector('.menu-toggle');
-             // Check if elements exist before proceeding
             if (!nav || !toggleButton) return;
-
-            // Toggle the 'show' class; 'isExpanded' will be true if the class was added, false if removed.
             const isExpanded = nav.classList.toggle('show');
-
-            // Update ARIA attribute to reflect the menu's current state (expanded or collapsed).
             toggleButton.setAttribute('aria-expanded', isExpanded);
         }
 
         /**
-         * Adds a global click listener to close the mobile menu if a click occurs
-         * outside the menu itself or the toggle button.
+         * Adds a global click listener to close the mobile menu.
          */
         document.addEventListener('click', function(event) {
             const nav = document.getElementById('mainNav');
-             // Check if nav exists before proceeding
             if (!nav) return;
-
             const toggleButton = document.querySelector('.menu-toggle');
-             // Check if toggleButton exists before proceeding
             if (!toggleButton) return;
 
-
-            // Check if the menu is currently shown and if the click target is outside both elements.
             if (nav.classList.contains('show') && !nav.contains(event.target) && !toggleButton.contains(event.target)) {
-                // Hide the menu by removing the 'show' class.
                 nav.classList.remove('show');
-                // Update the ARIA attribute on the toggle button.
                 toggleButton.setAttribute('aria-expanded', 'false');
             }
         });
