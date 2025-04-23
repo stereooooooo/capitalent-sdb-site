@@ -399,8 +399,9 @@ img, iframe {
 /* Styles for Approach Page Layout    */
 /* ================================== */
 
+/* --- DESKTOP Styles (Apply OUTSIDE media query) --- */
+
 /* Base style for content sections on Approach page */
-/* Applies bottom border/margin to all sections by default */
 .content-section {
     padding-bottom: 20px;
     margin-bottom: 40px;
@@ -412,46 +413,42 @@ img, iframe {
     margin-bottom: 0;
 }
 
-/* DESKTOP style for the specific section with heading aside */
+/* Specific style for the section with heading aside layout */
 .content-section--heading-aside {
-    display: flex; /* Makes heading and content side-by-side */
-    gap: 30px; /* Adjust gap between heading and content */
-    align-items: flex-start; /* Align items to the top */
-    /* Ensure default bottom border applies */
-    border-bottom: 1px solid #eee;
+    display: flex; /* Side-by-side layout */
+    flex-direction: row; /* Explicitly row for desktop */
+    gap: 30px;
+    align-items: flex-start;
 }
 
 .content-section--heading-aside .section-heading-wrapper {
-    flex: 0 0 200px; /* Fixed width for heading column (adjust as needed) */
-    padding-right: 20px; /* Optional padding */
+    flex: 0 0 200px; /* Fixed width for heading */
+    padding-right: 20px;
 }
 
 .content-section--heading-aside .section-content-wrapper {
     flex: 1; /* Content takes remaining space */
-    min-width: 0; /* Prevent flex overflow */
+    min-width: 0;
 }
 
-/* DESKTOP heading style within the aside section */
+/* Heading style within the aside section */
 .content-section--heading-aside h2 {
-    font-size: 1.4rem; /* Adjust size if needed */
+    font-size: 1.4rem;
     margin-top: 0;
-    margin-bottom: 0; /* Remove bottom margin */
+    margin-bottom: 0;
     color: #001f4d;
-    line-height: 1.4; /* Adjust line height for multi-line headings */
-    /* Remove any top border/padding if applied generally */
-    border-top: none;
+    line-height: 1.4;
+    border-top: none; /* No top border needed here */
     padding-top: 0;
 }
 
-/* DESKTOP general H2 style for other sections on the page */
-/* Applied to H2s NOT inside the heading-aside layout */
+/* General H2 style for other sections (NOT heading-aside) */
 .content-section:not(.content-section--heading-aside) h2 {
     font-size: 1.6rem;
     margin-top: 0;
-    margin-bottom: 20px; /* Space below heading */
+    margin-bottom: 20px;
     color: #001f4d;
-     /* Remove any top border/padding if applied generally */
-    border-top: none;
+    border-top: none; /* No top border needed here either */
     padding-top: 0;
 }
 /* --- End of Approach Page Desktop Styles --- */
@@ -464,39 +461,39 @@ img, iframe {
 
     /* --- General Mobile Adjustments --- */
     header {
-        padding: 10px 15px; /* Adjust header padding */
+        padding: 10px 15px;
     }
     .logo {
-        height: 40px; /* Smaller logo */
+        height: 40px;
     }
     .menu-toggle {
-        display: block; /* Show hamburger button */
-        order: 3; /* Ensure it appears last if wrapping */
+        display: block;
+        order: 3;
     }
 
     /* --- Mobile Navigation --- */
     nav {
-        display: none; /* Hide desktop nav links by default */
+        display: none;
     }
     nav.show {
-        display: flex; /* Show nav when toggled */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute; /* Position relative to header */
-        top: 65px; /* Adjust this value based on your actual header height */
-        right: 15px; /* Align to the right edge (considering header padding) */
-        width: 280px; /* Set a specific width for the dropdown */
-        max-width: 80%; /* Ensure it doesn't exceed screen width */
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 65px; /* Adjust as needed */
+        right: 15px;
+        width: 280px;
+        max-width: 80%;
         background: white;
-        border: 1px solid #ddd; /* Add border */
-        border-radius: 6px; /* Add rounded corners */
-        box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Add shadow */
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         z-index: 1000;
-        padding: 10px 0; /* Vertical padding */
-        gap: 0; /* Reset gap */
-        margin-top: 0; /* Reset margin */
+        padding: 10px 0;
+        gap: 0;
+        margin-top: 0;
     }
-    nav a { /* Mobile nav links */
-        padding: 10px 20px; /* Adjust padding */
+    nav a {
+        padding: 10px 20px;
         border-bottom: 1px solid #eee;
         width: 100%;
         text-align: left;
@@ -509,38 +506,38 @@ img, iframe {
         border-bottom-style: solid;
         border-bottom-width: 1px;
     }
-    nav a.active { /* Active mobile nav link */
+    nav a.active {
         background-color: #f5f7fa;
         border-left: 3px solid #c8102e;
         color: #c8102e;
         font-weight: bold;
     }
     nav a:hover,
-    nav a:focus { /* Mobile nav link hover/focus */
+    nav a:focus {
          background-color: #f5f7fa;
          border-left: 3px solid #c8102e;
          color: #c8102e;
     }
     nav a:last-child {
-        border-bottom: none; /* Remove border from last item */
+        border-bottom: none;
     }
     /* --- End Mobile Navigation --- */
 
 
     /* --- Hero Section Mobile --- */
     .hero {
-      padding: 24px 16px; /* Adjust padding */
+      padding: 24px 16px;
     }
     .hero h1 {
-        font-size: 1.8rem; /* Adjust size */
+        font-size: 1.8rem;
     }
     .hero p {
-        font-size: 1rem; /* Adjust size */
+        font-size: 1rem;
     }
 
     /* --- Container Mobile --- */
     .container {
-        padding: 0 15px; /* Reduce side padding */
+        padding: 0 15px;
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -556,108 +553,106 @@ img, iframe {
 
     /* --- Card Grid Mobile --- */
     .card-grid {
-        margin-top: 30px; /* Adjust top margin */
+        margin-top: 30px;
     }
     .info-card {
-        padding: 15px; /* Adjust card padding */
+        padding: 15px;
     }
     .info-card h3 {
-        font-size: 1rem; /* Adjust heading size */
+        font-size: 1rem;
     }
     .info-card p {
-        font-size: 0.9rem; /* Adjust text size */
+        font-size: 0.9rem;
     }
 
 
     /* --- Treatment Options Page Mobile --- */
     .treatment-block {
-        flex-direction: column; /* Stack image and text */
-        align-items: center; /* Center items */
-        gap: 15px; /* Adjust gap */
-        margin-bottom: 30px; /* Adjust margin */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
     }
     .treatment-block img {
-        width: 100%; /* Allow image to take width */
-        max-width: 300px; /* Limit max width */
-        margin: 0 auto 15px; /* Center image and add bottom margin */
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 15px;
     }
     .comparison-row {
-        gap: 15px; /* Adjust gap */
-        margin-bottom: 30px; /* Adjust margin */
+        gap: 15px;
+        margin-bottom: 30px;
     }
     .comparison-card {
-        min-width: 90%; /* Ensure card takes most width */
-        width: 100%; /* Use 100% width for consistency */
-        max-width: 100%; /* Override desktop max-width */
-        margin: 0; /* Remove auto margin */
-        padding: 15px; /* Adjust padding */
+        min-width: 90%;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 15px;
     }
 
 
     /* --- Resources Page Mobile --- */
     .resources-container {
-        flex-direction: column; /* Stack sidebar and article vertically */
-        gap: 0; /* Remove gap */
+        flex-direction: column;
+        gap: 0;
     }
     .sidebar {
-        width: 100%; /* Make sidebar take full width */
-        border-right: none; /* Remove side border */
-        padding-right: 0; /* Remove side padding */
-        border-bottom: 1px solid #ddd; /* Add bottom border for separation */
-        padding-bottom: 15px; /* Add padding below sidebar content */
-        margin-bottom: 25px; /* Add margin below sidebar */
-        flex-shrink: initial; /* Reset shrink property */
-        display: block !important; /* Ensure sidebar is shown */
+        width: 100%;
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        flex-shrink: initial;
+        display: block !important;
     }
     .sidebar h3 {
-        font-size: 1.1em; /* Slightly smaller heading on mobile */
-        margin-bottom: 10px; /* Adjust space below heading */
-        padding-bottom: 5px; /* Adjust padding below heading */
-        border-bottom-width: 1px; /* Ensure border is visible */
+        font-size: 1.1em;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom-width: 1px;
     }
     .article-display {
-       width: 100%; /* Ensure article takes full width */
-       padding: 0; /* Remove desktop padding */
+       width: 100%;
+       padding: 0;
     }
     .article-display h2 {
-        font-size: 1.4rem; /* Adjust size */
+        font-size: 1.4rem;
     }
     .article-display p,
     .article-display li {
-        font-size: 1rem; /* Adjust size */
+        font-size: 1rem;
         line-height: 1.7;
     }
 
     /* --- Approach Page Mobile --- */
-    /* Stack the heading-aside section */
+    /* General section spacing */
+     .content-section {
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    /* Stack the specific heading-aside section */
     .content-section--heading-aside {
         flex-direction: column; /* Stack heading and content */
-        gap: 10px; /* REDUCED vertical gap */
-        /* border-bottom is handled by the general .content-section mobile rule below */
+        gap: 10px; /* Adjust vertical gap */
     }
     .content-section--heading-aside .section-heading-wrapper {
         flex-basis: auto; /* Reset flex basis */
         width: 100%; /* Full width */
         padding-right: 0; /* Remove right padding */
-        /* Ensure no border/padding/margin below heading wrapper */
-        border-bottom: none;
+        border-bottom: none; /* No border needed below heading */
         padding-bottom: 0;
         margin-bottom: 0;
     }
     .content-section--heading-aside .section-heading-wrapper h2 {
         font-size: 1.3rem; /* Adjust mobile heading size if needed */
-        margin-bottom: 0; /* Ensure no bottom margin on the heading itself */
-        border-top: none; /* Explicitly remove top border */
-        padding-top: 0; /* Explicitly remove top padding */
-    }
-    /* Adjust general section spacing */
-    .content-section {
-        padding-bottom: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 0;
+        border-top: none;
+        padding-top: 0;
     }
     /* General H2 mobile style (applies to sections other than heading-aside) */
     .content-section:not(.content-section--heading-aside) h2 {
-        font-size: 1.4rem; /* Adjust general H2 size for mobile */
+        font-size: 1.4rem;
         margin-bottom: 15px;
     }
     /* --- End Approach Page Mobile --- */
