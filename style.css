@@ -521,6 +521,85 @@ img, iframe {
     border-top: none;
     padding-top: 0;
 }
+/* ================================== */
+/* Styles for FAQs Page Accordion     */
+/* ================================== */
+
+.faq-section {
+  /* margin-top: 40px; /* Handled by container margin */
+}
+
+.accordion {
+  background-color: #f9f9fc; /* Light background */
+  color: #001f4d; /* Dark blue text */
+  cursor: pointer;
+  padding: 16px 20px;
+  width: 100%;
+  border: none; /* Remove default border */
+  border-left: 4px solid #c8102e; /* Accent border */
+  text-align: left;
+  outline: none;
+  font-size: 1.05rem; /* Slightly larger font */
+  transition: background-color 0.2s ease;
+  margin-bottom: 8px; /* Space between questions */
+  display: block; /* Ensure it takes full width */
+  box-sizing: border-box;
+}
+
+.accordion:hover {
+  background-color: #f1f1f8; /* Slightly darker on hover */
+}
+
+.accordion.active { /* Style for active/open accordion button */
+  font-weight: bold;
+   /* Optional: Change background when active */
+  /* background-color: #e8e8f2; */
+}
+
+/* Add focus style for accessibility */
+.accordion:focus-visible {
+   box-shadow: 0 0 0 2px rgba(0, 31, 77, 0.3); /* Outline on focus */
+}
+
+
+.panel {
+  padding: 10px 20px 16px 24px; /* Adjust padding (more left padding) */
+  background-color: white;
+  display: none; /* Hidden by default */
+  overflow: hidden;
+  line-height: 1.7;
+  /* Add a light bottom border to separate answer from next question */
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px; /* Match accordion margin */
+}
+
+/* Style paragraphs within the panel */
+.panel p {
+    margin-bottom: 1em;
+}
+.panel p:last-child {
+    margin-bottom: 0; /* Remove margin from last paragraph */
+}
+
+/* Optional: Add smooth transition using max-height */
+/*
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 20px; // Adjust padding for transition
+    background-color: white;
+    line-height: 1.7;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 8px;
+}
+.panel.show { // Add this class via JS instead of display:block
+    max-height: 500px; // Set a large enough max-height
+    padding: 10px 20px 16px 24px;
+}
+*/
+
+
 
 /* --- End of Desktop Styles --- */
 
