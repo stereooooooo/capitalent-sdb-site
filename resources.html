@@ -113,13 +113,16 @@
          */
         async function loadArticle(slug) {
             const articleDisplay = document.getElementById("articleDisplay");
-            // If no slug (e.g., default dropdown option selected), do nothing or show default message.
+            // If no slug (e.g., default dropdown option selected), show the default welcome message.
             if (!slug) {
                  articleDisplay.innerHTML = `
                     <h2>Welcome to Our Sleep Resource Library</h2>
                     <p>Select an article from the sidebar or the dropdown above to learn more about how to sleep better, breathe easier, and explore your treatment options at Capital ENT & Sinus Center.</p>`;
-                 // Optionally update the select menu if needed, though usually not necessary here.
-                 // document.getElementById('article-select').value = "";
+                 // Reset the select menu to the default option if needed
+                 const selectMenu = document.getElementById('article-select');
+                 if (selectMenu) {
+                    selectMenu.value = "";
+                 }
                  return;
             }
 
@@ -127,16 +130,22 @@
             articleDisplay.innerHTML = '<p>Loading article...</p>';
             try {
                 // Construct the path to the article HTML file.
+                // Assumes articles are located in a 'resources' subfolder relative to this HTML file.
                 const response = await fetch(`resources/${slug}.html`);
 
+                // Check if the network response was successful.
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
+                // Get the HTML content as text.
                 const html = await response.text();
+                // Update the article display area with the fetched content.
                 articleDisplay.innerHTML = html;
 
             } catch (error) {
+                // Log the error for debugging purposes.
                 console.error("Error loading article:", error);
+                // Display a user-friendly error message.
                 articleDisplay.innerHTML = '<p>Sorry, this article could not be loaded at this time. Please try again later.</p>';
             }
         }
