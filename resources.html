@@ -1,132 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sleep Health Articles & Resources | Capital ENT</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-  <style>
-    .resources-container {
-      display: flex;
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .sidebar {
-      width: 250px;
-      margin-right: 40px;
-      border-right: 1px solid #ccc;
-      padding-right: 20px;
-    }
-    .sidebar h3 {
-      font-size: 1.1em;
-      margin-top: 0;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .sidebar li {
-      margin-bottom: 10px;
-    }
-    .sidebar a {
-      color: #001f4d;
-      text-decoration: none;
-      font-weight: 500;
-      cursor: pointer;
-    }
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-    .article-display {
-      flex: 1;
-    }
-    .article-display h2 {
-      font-size: 1.6em;
-      margin-top: 0;
-    }
-    .hidden {
-      display: none;
-    }
-  </style>
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sleep Health Articles & Resources | Capital ENT</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
 <body>
-  <div class="micro-banner">
-    This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
-    <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
-  </div>
-  <div class="top-bar">
-    Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
-  </div>
-  <header>
-    <div class="logo-nav">
-      <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="understanding.html">Understanding SDB</a>
-        <a href="approach.html">Our Approach</a>
-        <a href="treatment.html">Treatment Options</a>
-        <a href="resources.html" class="active">Resources</a>
-        <a href="faqs.html">FAQs</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="micro-banner">
+        This is a specialty site focused on Sleep-Disordered Breathing care. Visit our full site at
+        <a href="https://www.capitalent.com" target="_blank">CapitalENT.com</a>
     </div>
-  </header>
 
-  <section class="hero">
-    <h1>Sleep Health Articles & Resources</h1>
-    <p>Explore categorized, easy-to-read articles about sleep health, snoring, treatment options, and more.</p>
-  </section>
+    <div class="top-bar">
+        Call Us: 512-339-4040 | <a href="#">Patient Portal</a>
+    </div>
 
-  <div class="resources-container">
-    <aside class="sidebar">
-      <h3>Sleep Topics</h3>
-      <ul>
-        <li><strong>Diagnosis & Basics</strong></li>
-        <li><a onclick="loadArticle('melatonin')">Can Melatonin Help You Sleep?</a></li>
-        <li><a onclick="loadArticle('central-vs-obstructive')">Central vs. Obstructive Sleep Apnea</a></li>
-        <li><a onclick="loadArticle('do-you-need-study')">Do You Really Need a Sleep Study?</a></li>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="logo.svg" alt="Capital ENT & Sinus Center Logo" class="logo" />
+        </a>
 
-        <li><strong>Management & Therapy</strong></li>
-        <li><a onclick="loadArticle('cpap')">Making CPAP Work for You</a></li>
-        <li><a onclick="loadArticle('positional-therapy')">Positional Therapy for Sleep Apnea</a></li>
-        <li><a onclick="loadArticle('sleep-hygiene')">Sleep Hygiene</a></li>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+            ☰ <span class="sr-only">Menu</span> </button>
 
-        <li><strong>Related Conditions</strong></li>
-        <li><a onclick="loadArticle('allergies')">How Allergies Affect Your Sleep</a></li>
-        <li><a onclick="loadArticle('weight-loss')">Weight Loss and Sleep Apnea</a></li>
-        <li><a onclick="loadArticle('insomnia-overlap')">Sleep Apnea and Insomnia Overlap</a></li>
-        <li><a onclick="loadArticle('restless-legs')">What is Restless Leg Syndrome?</a></li>
-        <li><a onclick="loadArticle('mouth-breathing')">How Mouth Breathing Affects Sleep</a></li>
-        <li><a onclick="loadArticle('nasal-congestion')">Nasal Congestion at Night</a></li>
-        <li><a onclick="loadArticle('rem-sleep')">What Happens During REM Sleep?</a></li>
-        <li><a onclick="loadArticle('snoring-warning')">When Snoring Is a Sign of Something More</a></li>
-      </ul>
-    </aside>
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="understanding.html">Understanding SDB</a>
+            <a href="approach.html">Our Approach</a>
+            <a href="treatment.html">Treatment Options</a>
+            <a href="resources.html" class="active">Resources</a> <a href="faqs.html">FAQs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-    <main class="article-display fade-in" id="articleDisplay">
-      <h2>Welcome to Our Sleep Resource Library</h2>
-      <p>Select an article from the sidebar to learn more about how to sleep better, breathe easier, and explore your treatment options at Capital ENT & Sinus Center.</p>
-    </main>
-  </div>
+    <section class="hero">
+        <h1>Sleep Health Articles & Resources</h1>
+        <p>Explore categorized, easy-to-read articles about sleep health, snoring, treatment options, and more.</p>
+    </section>
 
-  <footer>
-    <p>Capital ENT & Sinus Center © 2025<br>
-      <a href="https://www.capitalent.com">www.capitalent.com</a>
-    </p>
-  </footer>
+    <main class="container">
+        <div class="resources-container">
+            <aside class="sidebar">
+                <h3>Sleep Topics</h3>
+                <ul>
+                    <li><strong>Diagnosis & Basics</strong></li>
+                    <li><a onclick="loadArticle('melatonin')">Can Melatonin Help You Sleep?</a></li>
+                    <li><a onclick="loadArticle('central-vs-obstructive')">Central vs. Obstructive Sleep Apnea</a></li>
+                    <li><a onclick="loadArticle('do-you-need-study')">Do You Really Need a Sleep Study?</a></li>
 
-  <script>
-    async function loadArticle(slug) {
-      try {
-        const response = await fetch(`resources/${slug}.html`);
-        const html = await response.text();
-        document.getElementById("articleDisplay").innerHTML = html;
-      } catch (e) {
-        document.getElementById("articleDisplay").innerHTML = '<p>Sorry, this article could not be loaded.</p>';
-      }
-    }
-  </script>
+                    <li><strong>Management & Therapy</strong></li>
+                    <li><a onclick="loadArticle('cpap')">Making CPAP Work for You</a></li>
+                    <li><a onclick="loadArticle('positional-therapy')">Positional Therapy for Sleep Apnea</a></li>
+                    <li><a onclick="loadArticle('sleep-hygiene')">Sleep Hygiene</a></li>
+
+                    <li><strong>Related Conditions</strong></li>
+                    <li><a onclick="loadArticle('allergies')">How Allergies Affect Your Sleep</a></li>
+                    <li><a onclick="loadArticle('weight-loss')">Weight Loss and Sleep Apnea</a></li>
+                    <li><a onclick="loadArticle('insomnia-overlap')">Sleep Apnea and Insomnia Overlap</a></li>
+                    <li><a onclick="loadArticle('restless-legs')">What is Restless Leg Syndrome?</a></li>
+                    <li><a onclick="loadArticle('mouth-breathing')">How Mouth Breathing Affects Sleep</a></li>
+                    <li><a onclick="loadArticle('nasal-congestion')">Nasal Congestion at Night</a></li>
+                    <li><a onclick="loadArticle('rem-sleep')">What Happens During REM Sleep?</a></li>
+                    <li><a onclick="loadArticle('snoring-warning')">When Snoring Is a Sign of Something More</a></li>
+                </ul>
+            </aside>
+
+            <section class="article-display fade-in" id="articleDisplay">
+                <h2>Welcome to Our Sleep Resource Library</h2>
+                <p>Select an article from the sidebar to learn more about how to sleep better, breathe easier, and explore your treatment options at Capital ENT & Sinus Center.</p>
+            </section>
+        </div> </main> <footer>
+        <p>Capital ENT & Sinus Center © 2025<br>
+          <a href="https://www.capitalent.com">www.capitalent.com</a>
+        </p>
+    </footer>
+
+    <script>
+        /**
+         * Fetches HTML content from a specified path and displays it in the article display area.
+         * @param {string} slug - The unique identifier for the article (used to build the file path).
+         */
+        async function loadArticle(slug) {
+            const articleDisplay = document.getElementById("articleDisplay");
+            // Provide immediate feedback that content is loading.
+            articleDisplay.innerHTML = '<p>Loading article...</p>';
+            try {
+                // Construct the path to the article HTML file.
+                // Assumes articles are located in a 'resources' subfolder relative to this HTML file.
+                const response = await fetch(`resources/${slug}.html`);
+
+                // Check if the network response was successful.
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                // Get the HTML content as text.
+                const html = await response.text();
+                // Update the article display area with the fetched content.
+                articleDisplay.innerHTML = html;
+
+            } catch (error) {
+                // Log the error for debugging purposes.
+                console.error("Error loading article:", error);
+                // Display a user-friendly error message.
+                articleDisplay.innerHTML = '<p>Sorry, this article could not be loaded at this time. Please try again later.</p>';
+            }
+        }
+
+        /**
+         * Toggles the visibility of the mobile navigation menu.
+         * Manages the 'show' class and ARIA attributes for accessibility.
+         */
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            const toggleButton = document.querySelector('.menu-toggle');
+             // Check if elements exist before proceeding
+            if (!nav || !toggleButton) return;
+
+            // Toggle the 'show' class; 'isExpanded' will be true if the class was added, false if removed.
+            const isExpanded = nav.classList.toggle('show');
+
+            // Update ARIA attribute to reflect the menu's current state (expanded or collapsed).
+            toggleButton.setAttribute('aria-expanded', isExpanded);
+        }
+
+        /**
+         * Adds a global click listener to close the mobile menu if a click occurs
+         * outside the menu itself or the toggle button.
+         */
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('mainNav');
+             // Check if nav exists before proceeding
+            if (!nav) return;
+
+            const toggleButton = document.querySelector('.menu-toggle');
+             // Check if toggleButton exists before proceeding
+            if (!toggleButton) return;
+
+
+            // Check if the menu is currently shown and if the click target is outside both elements.
+            if (nav.classList.contains('show') && !nav.contains(event.target) && !toggleButton.contains(event.target)) {
+                // Hide the menu by removing the 'show' class.
+                nav.classList.remove('show');
+                // Update the ARIA attribute on the toggle button.
+                toggleButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
 </body>
 </html>
